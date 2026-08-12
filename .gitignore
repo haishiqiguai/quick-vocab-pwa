@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.log
+runtime/
+tmp/
+.env
+.env.*
+!.env.example
+参考程序/
+要求/
+.DS_Store
