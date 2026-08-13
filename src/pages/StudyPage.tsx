@@ -174,18 +174,9 @@ export function StudyPage() {
     setIndex(startIndex);
     setQueue(initialQueue);
     resumeInitializedRef.current = true;
-    if (resumableSession) {
-      sessionIdRef.current = resumableSession.id;
-      sessionRecordRef.current = resumableSession;
-      const restoredMetrics = { viewed: resumableSession.viewed, correct: resumableSession.correct, wrong: resumableSession.wrong };
-      metricsRef.current = restoredMetrics;
-      setMetrics(restoredMetrics);
-      void persistSession({ endedAt: undefined });
-    } else {
-      void beginSession(ids, startIndex, initialQueue);
-    }
+    void beginSession(ids, startIndex, initialQueue);
     setStudyReady(true);
-  }, [activeBook?.id, studyWords, beginSession, persistSession, plan.mode, resumeSession, resumeSessionId, resumeWordId]);
+  }, [activeBook?.id, studyWords, beginSession, plan.mode, resumeSession, resumeSessionId, resumeWordId]);
 
   useEffect(() => {
     if (!settings.autoPronounce) {

@@ -2,9 +2,9 @@ import { subDays } from 'date-fns';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useMemo } from 'react';
 import { PageHeader } from '../components/ui';
-import { db } from '../lib/db';
+import { ACTIVITY_KEY_PREFIX, db, isStudyActivityRecord } from '../lib/db';
 import { dayKey, formatDuration } from '../lib/format';
-import { calculateStudyStats } from '../lib/stats';
+import { calculateDailyActivity, calculateStudyStats } from '../lib/stats';
 import { useApp } from '../state/AppContext';
 
 export function DashboardPage() {
@@ -12,6 +12,13 @@ export function DashboardPage() {
   const activeProgress = useLiveQuery(() => activeBook ? db.progress.where('bookId').equals(activeBook.id).toArray() : [], [activeBook?.id], []) ?? [];
   const allProgress = useLiveQuery(() => db.progress.toArray(), [], []) ?? [];
   const sessions = useLiveQuery(() => db.sessions.toArray(), [], []) ?? [];
+  const storedActivity = useLiveQuery(
+    async () => (await db.meta.filter((item) => item.key.startsWith(ACTIVITY_KEY_PREFIX)).toArray())
+      .map((item) => item.value)
+      .filter(isStudyActivityRecord),
+    [],
+    []
+  ) ?? [];
   const now = new Date();
   const stats = useMemo(
     () => calculateStudyStats(activeProgress, allProgress, sessions, now),
@@ -19,15 +26,12 @@ export function DashboardPage() {
   );
 
   const activity = useMemo(() => {
-    const counts = new Map<string, number>();
-    allProgress.forEach((item) => {
-      if (item.lastViewedAt) counts.set(dayKey(item.lastViewedAt), (counts.get(dayKey(item.lastViewedAt)) ?? 0) + 1);
-    });
+    const counts = calculateDailyActivity(allProgress, sessions, storedActivity);
     return Array.from({ length: 28 }, (_, index) => {
       const date = subDays(now, 27 - index);
       return { date, count: counts.get(dayKey(date)) ?? 0 };
     });
-  }, [allProgress]);
+  }, [allProgress, sessions, storedActivity]);
 
   const totalAnswers = stats.correct + stats.wrong;
   const accuracy = totalAnswers ? Math.round((stats.correct / totalAnswers) * 100) : 0;

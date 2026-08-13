@@ -1,6 +1,42 @@
 import { endOfDay, startOfDay } from 'date-fns';
-import type { StudySession, WordProgress } from '../types';
+import type { StudyActivityRecord, StudySession, WordProgress } from '../types';
 import { sessionDuration } from './format';
+import { dayKey } from './format';
+
+function addCount(counts: Map<string, number>, date: string, count: number) {
+  if (!date || !Number.isFinite(count) || count <= 0) return;
+  counts.set(date, (counts.get(date) ?? 0) + count);
+}
+
+export function calculateDailyActivity(
+  allProgress: WordProgress[],
+  sessions: StudySession[],
+  storedActivity: StudyActivityRecord[] = []
+): Map<string, number> {
+  const progressCounts = new Map<string, number>();
+  const sessionCounts = new Map<string, number>();
+  const storedCounts = new Map<string, number>();
+
+  allProgress.forEach((item) => {
+    if (item.lastViewedAt) addCount(progressCounts, dayKey(item.lastViewedAt), 1);
+  });
+  sessions.forEach((session) => {
+    const count = Math.max(session.viewed, session.correct + session.wrong);
+    if (count <= 0) return;
+    addCount(sessionCounts, dayKey(session.startedAt), count);
+    if (session.endedAt && dayKey(session.endedAt) !== dayKey(session.startedAt)) {
+      addCount(sessionCounts, dayKey(session.endedAt), count);
+    }
+  });
+  storedActivity.forEach((record) => addCount(storedCounts, record.date, record.count));
+
+  const dates = new Set([...progressCounts.keys(), ...sessionCounts.keys(), ...storedCounts.keys()]);
+  return new Map([...dates].map((date) => [date, Math.max(
+    progressCounts.get(date) ?? 0,
+    sessionCounts.get(date) ?? 0,
+    storedCounts.get(date) ?? 0
+  )]));
+}
 
 export function calculateStudyStats(
   activeProgress: WordProgress[],

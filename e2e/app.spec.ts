@@ -101,8 +101,32 @@ test('review auto pronunciation works and its exact queue resumes after exit', a
 
   await page.getByRole('button', { name: '退出学习' }).click();
   await expect(page.locator('.hero-stats')).toHaveAttribute('aria-label', '继续上次学习进度');
+  const sessionCountBeforeResume = await page.evaluate(async () => {
+    const request = indexedDB.open('quick-vocab-db');
+    const database = await new Promise<IDBDatabase>((resolve, reject) => {
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    return new Promise<number>((resolve, reject) => {
+      const countRequest = database.transaction('sessions').objectStore('sessions').count();
+      countRequest.onsuccess = () => resolve(countRequest.result);
+      countRequest.onerror = () => reject(countRequest.error);
+    });
+  });
   await page.locator('.hero-stats').click();
   await expect(page.locator('.review-card h1')).toHaveText('be');
+  await expect.poll(() => page.evaluate(async () => {
+    const request = indexedDB.open('quick-vocab-db');
+    const database = await new Promise<IDBDatabase>((resolve, reject) => {
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    return new Promise<number>((resolve, reject) => {
+      const countRequest = database.transaction('sessions').objectStore('sessions').count();
+      countRequest.onsuccess = () => resolve(countRequest.result);
+      countRequest.onerror = () => reject(countRequest.error);
+    });
+  })).toBe(sessionCountBeforeResume + 1);
 });
 
 test('settings persists theme and backup restore', async ({ page }) => {

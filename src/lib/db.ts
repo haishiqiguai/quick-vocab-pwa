@@ -4,6 +4,7 @@ import type {
   MetaRecord,
   StudyPlan,
   StudySession,
+  StudyActivityRecord,
   Word,
   WordBook,
   WordProgress
@@ -12,6 +13,7 @@ import type {
 export const BUILTIN_BOOK_ID = 'builtin-gaokao';
 export const PLAN_KEY = 'studyPlan';
 export const SETTINGS_KEY = 'settings';
+export const ACTIVITY_KEY_PREFIX = 'studyActivity:';
 
 class VocabDatabase extends Dexie {
   wordBooks!: EntityTable<WordBook, 'id'>;
@@ -124,6 +126,35 @@ export function progressId(bookId: string, wordId: string): string {
   return `${bookId}:${wordId}`;
 }
 
+function localDateKey(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function activityId(bookId: string, date: string): string {
+  return `${ACTIVITY_KEY_PREFIX}${bookId}:${date}`;
+}
+
+async function incrementStudyActivity(bookId: string, date: string): Promise<void> {
+  const key = activityId(bookId, date);
+  const current = await db.meta.get(key);
+  const stored = current?.value as Partial<StudyActivityRecord> | undefined;
+  const count = typeof stored?.count === 'number' && Number.isFinite(stored.count) ? stored.count : 0;
+  await db.meta.put({ key, value: { bookId, date, count: count + 1 } satisfies StudyActivityRecord });
+}
+
+export function isStudyActivityRecord(value: unknown): value is StudyActivityRecord {
+  if (!value || typeof value !== 'object') return false;
+  const record = value as Partial<StudyActivityRecord>;
+  return typeof record.bookId === 'string'
+    && /^\d{4}-\d{2}-\d{2}$/.test(record.date ?? '')
+    && typeof record.count === 'number'
+    && Number.isFinite(record.count)
+    && record.count > 0;
+}
+
 export async function getOrCreateProgress(bookId: string, wordId: string): Promise<WordProgress> {
   const id = progressId(bookId, wordId);
   return (
@@ -140,26 +171,34 @@ export async function getOrCreateProgress(bookId: string, wordId: string): Promi
 }
 
 export async function markWordViewed(word: Word): Promise<void> {
-  const now = new Date().toISOString();
-  const current = await getOrCreateProgress(word.bookId, word.id);
-  await db.progress.put({
-    ...current,
-    viewedCount: current.viewedCount + 1,
-    firstViewedAt: current.firstViewedAt ?? now,
-    lastViewedAt: now
+  const nowDate = new Date();
+  const now = nowDate.toISOString();
+  await db.transaction('rw', db.progress, db.meta, async () => {
+    const current = await getOrCreateProgress(word.bookId, word.id);
+    await db.progress.put({
+      ...current,
+      viewedCount: current.viewedCount + 1,
+      firstViewedAt: current.firstViewedAt ?? now,
+      lastViewedAt: now
+    });
+    await incrementStudyActivity(word.bookId, localDateKey(nowDate));
   });
 }
 
 export async function recordReview(word: Word, correct: boolean): Promise<void> {
-  const now = new Date().toISOString();
-  const current = await getOrCreateProgress(word.bookId, word.id);
-  await db.progress.put({
-    ...current,
-    viewedCount: current.viewedCount + 1,
-    firstViewedAt: current.firstViewedAt ?? now,
-    lastViewedAt: now,
-    correctCount: current.correctCount + (correct ? 1 : 0),
-    wrongCount: current.wrongCount + (correct ? 0 : 1)
+  const nowDate = new Date();
+  const now = nowDate.toISOString();
+  await db.transaction('rw', db.progress, db.meta, async () => {
+    const current = await getOrCreateProgress(word.bookId, word.id);
+    await db.progress.put({
+      ...current,
+      viewedCount: current.viewedCount + 1,
+      firstViewedAt: current.firstViewedAt ?? now,
+      lastViewedAt: now,
+      correctCount: current.correctCount + (correct ? 1 : 0),
+      wrongCount: current.wrongCount + (correct ? 0 : 1)
+    });
+    await incrementStudyActivity(word.bookId, localDateKey(nowDate));
   });
 }
 

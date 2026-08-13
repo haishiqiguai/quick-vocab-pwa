@@ -84,6 +84,12 @@ export interface MetaRecord<T = unknown> {
   value: T;
 }
 
+export interface StudyActivityRecord {
+  bookId: string;
+  date: string;
+  count: number;
+}
+
 export interface SeedWord {
   term: string;
   meaning: string;
