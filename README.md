@@ -4,6 +4,14 @@
 
 一个本地优先、可离线安装的英汉背单词应用。软件采用“Target 快速浏览 → Review 错词回队”的两步学习方式，内置 357 词高考真题词本和 896 词对口升学复习指导词本，支持 CSV/XLSX 导入、生词收藏、统计、学习计划与完整本地备份。
 
+## 下载安装
+
+Android 用户可直接下载 [最新版 APK（1.0.5）](https://github.com/haishiqiguai/quick-vocab-pwa/releases/latest/download/quick-vocab-1.0.5-release.apk)，支持 Android 7.0 及以上。下载后允许浏览器或文件管理器安装该 APK 即可使用。
+
+[查看全部版本与发布说明](https://github.com/haishiqiguai/quick-vocab-pwa/releases) · [查看最新版本 SHA-256 校验文件](https://github.com/haishiqiguai/quick-vocab-pwa/releases/latest/download/SHA256SUMS.txt)
+
+已有旧版时，建议先导出 JSON 备份，再直接覆盖安装新版，不要卸载。历史版本仅供留档，Android 通常不允许直接降级覆盖安装。
+
 ## 快速开始
 
 要求 Node.js 20.19 或更高版本。
