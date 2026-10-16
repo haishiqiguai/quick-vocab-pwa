@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import readXlsxFile, { readSheetNames } from 'read-excel-file';
+import readWorkbook, { readSheet } from 'read-excel-file/browser';
 import { db } from './db';
 import { createLocalId } from './id';
 import type {
@@ -81,11 +81,12 @@ export async function parseCsvFile(file: File): Promise<ParsedImport> {
 }
 
 export async function getWorkbookSheets(file: File): Promise<string[]> {
-  return readSheetNames(file);
+  const sheets = await readWorkbook(file);
+  return sheets.map((sheet) => sheet.sheet);
 }
 
 export async function parseXlsxFile(file: File, sheet?: string): Promise<ParsedImport> {
-  const rows = await readXlsxFile(file, sheet ? { sheet } : undefined);
+  const rows = await readSheet(file, sheet ?? 1);
   return analyzeRows(rows as ImportRow[]);
 }
 

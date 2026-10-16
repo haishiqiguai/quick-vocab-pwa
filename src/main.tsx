@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { registerSW } from 'virtual:pwa-register';
 import App from './App';
 import { RouterProvider } from './lib/router';
 import { AppProvider } from './state/AppContext';
 import './index.css';
 
-registerSW({ immediate: true });
+if (!import.meta.env.VITE_NATIVE_APP) {
+  void import('virtual:pwa-register').then(({ registerSW }) => registerSW({ immediate: true }));
+}
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

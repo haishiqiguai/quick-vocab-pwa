@@ -1,0 +1,5 @@
+# Copy to android/signing.properties and keep the real file private.
+storeFile=../keystore/quick-vocab-release.jks
+storePassword=replace-with-a-long-random-password
+keyAlias=quick-vocab
+keyPassword=replace-with-a-long-random-password

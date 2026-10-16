@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { getEnglishSpeechVoices, normalizeSpeechRate, speechVoiceId } from './speech';
+import { formatMeaningForSpeech, getChineseSpeechVoices, getEnglishSpeechVoices, normalizeSpeechRate, runWithSpeechFallback, speechPlaybackCompleted, speechVoiceId, warmUpChineseSpeech } from './speech';
 import { normalizeStoredSettings } from './db';
 
 describe('normalizeSpeechRate', () => {
@@ -24,6 +24,41 @@ describe('speech voice helpers', () => {
     ] as SpeechSynthesisVoice[];
     expect(getEnglishSpeechVoices(voices)).toEqual([voices[0]]);
     expect(speechVoiceId(voices[0])).toBe('english-natural');
+    expect(getChineseSpeechVoices(voices)).toEqual([voices[1]]);
+  });
+
+  it('converts English part-of-speech abbreviations before Chinese narration', () => {
+    expect(formatMeaningForSpeech('n. 奖项；v. 授予；adj. 值得的；adv. 快速地')).toBe('名词， 奖项；动词， 授予；形容词， 值得的；副词， 快速地');
+    expect(formatMeaningForSpeech('vt. 完成；vi. 到达；prep. 在')).toBe('及物动词， 完成；不及物动词， 到达；介词， 在');
+  });
+
+  it('warms the Chinese system voice with a silent utterance', async () => {
+    const spoken: SpeechSynthesisUtterance[] = [];
+    class MockUtterance {
+      text: string;
+      lang = '';
+      volume = 1;
+      voice: SpeechSynthesisVoice | null = null;
+      onend: ((event: SpeechSynthesisEvent) => void) | null = null;
+      onerror: ((event: SpeechSynthesisErrorEvent) => void) | null = null;
+      constructor(text: string) { this.text = text; }
+    }
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', { configurable: true, value: MockUtterance });
+    Object.defineProperty(window, 'speechSynthesis', {
+      configurable: true,
+      value: {
+        speaking: false,
+        pending: false,
+        getVoices: () => [{ voiceURI: 'mandarin', name: '普通话', lang: 'zh-CN' }],
+        speak: (utterance: MockUtterance) => {
+          spoken.push(utterance as unknown as SpeechSynthesisUtterance);
+          utterance.onend?.(new Event('end') as SpeechSynthesisEvent);
+        }
+      }
+    });
+    await warmUpChineseSpeech();
+    expect(spoken).toHaveLength(1);
+    expect(spoken[0]).toMatchObject({ text: '。', lang: 'zh-CN', volume: 0 });
   });
 });
 
@@ -43,5 +78,54 @@ describe('speech settings migration', () => {
   it('keeps phonetics visible for old settings and restores an explicit hidden choice', () => {
     expect(normalizeStoredSettings({}).hidePhonetic).toBe(false);
     expect(normalizeStoredSettings({ hidePhonetic: true }).hidePhonetic).toBe(true);
+  });
+
+  it('uses safe automatic playback defaults and limits restored values', () => {
+    expect(normalizeStoredSettings({})).toMatchObject({
+      autoPlayEnabled: false,
+      autoPlayInterval: 0,
+      autoPlayRepeatCount: 2,
+      autoPlayWord: true,
+      autoPlayMeaning: false
+    });
+    expect(normalizeStoredSettings({
+      autoPlayEnabled: true,
+      autoPlayInterval: 99,
+      autoPlayRepeatCount: 0,
+      autoPlayWord: false,
+      autoPlayMeaning: true
+    })).toMatchObject({
+      autoPlayEnabled: true,
+      autoPlayInterval: 60,
+      autoPlayRepeatCount: 1,
+      autoPlayWord: false,
+      autoPlayMeaning: true
+    });
+  });
+});
+
+describe('offline speech fallback', () => {
+  it('advances automatic playback only after a real completion', () => {
+    expect(speechPlaybackCompleted('completed')).toBe(true);
+    expect(speechPlaybackCompleted('stopped')).toBe(false);
+    expect(speechPlaybackCompleted('failed')).toBe(false);
+  });
+
+  it('uses the system fallback exactly once when bundled playback fails', async () => {
+    let fallbackCalls = 0;
+    const result = await runWithSpeechFallback(
+      async () => 'failed',
+      async () => { fallbackCalls += 1; return 'completed'; }
+    );
+    expect(result).toBe('completed');
+    expect(fallbackCalls).toBe(1);
+  });
+
+  it('does not fall back after successful or explicitly stopped playback', async () => {
+    let fallbackCalls = 0;
+    const fallback = async () => { fallbackCalls += 1; return 'completed' as const; };
+    expect(await runWithSpeechFallback(async () => 'completed', fallback)).toBe('completed');
+    expect(await runWithSpeechFallback(async () => 'stopped', fallback)).toBe('stopped');
+    expect(fallbackCalls).toBe(0);
   });
 });

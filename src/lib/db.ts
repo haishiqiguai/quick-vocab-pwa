@@ -11,6 +11,7 @@ import type {
 } from '../types';
 
 export const BUILTIN_BOOK_ID = 'builtin-gaokao';
+export const GUIDE_BOOK_ID = 'builtin-duikou-guide';
 export const PLAN_KEY = 'studyPlan';
 export const SETTINGS_KEY = 'settings';
 export const ACTIVITY_KEY_PREFIX = 'studyActivity:';
@@ -48,6 +49,11 @@ export const defaultSettings: AppSettings = {
   studyBackground: 'default',
   repetitiveLearning: true,
   autoPronounce: false,
+  autoPlayEnabled: false,
+  autoPlayInterval: 0,
+  autoPlayRepeatCount: 2,
+  autoPlayWord: true,
+  autoPlayMeaning: false,
   hidePhonetic: false,
   speechRate: 1,
   speechEngine: 'neural',
@@ -76,10 +82,21 @@ export function normalizeStoredSettings(stored: Partial<AppSettings>): AppSettin
     || stored.studyBackground === 'coolGray'
     ? stored.studyBackground
     : defaultSettings.studyBackground;
+  const autoPlayInterval = typeof stored.autoPlayInterval === 'number' && Number.isFinite(stored.autoPlayInterval)
+    ? Math.min(60, Math.max(0, Math.round(stored.autoPlayInterval)))
+    : defaultSettings.autoPlayInterval;
+  const autoPlayRepeatCount = typeof stored.autoPlayRepeatCount === 'number' && Number.isFinite(stored.autoPlayRepeatCount)
+    ? Math.min(10, Math.max(1, Math.round(stored.autoPlayRepeatCount)))
+    : defaultSettings.autoPlayRepeatCount;
   return {
     ...defaultSettings,
     ...stored,
     hidePhonetic: stored.hidePhonetic === true,
+    autoPlayEnabled: stored.autoPlayEnabled === true,
+    autoPlayInterval,
+    autoPlayRepeatCount,
+    autoPlayWord: stored.autoPlayWord !== false,
+    autoPlayMeaning: stored.autoPlayMeaning === true,
     studyBackground,
     speechEngine: stored.speechEngine === 'system' ? 'system' : 'neural',
     neuralVoice: typeof stored.neuralVoice === 'string' && stored.neuralVoice

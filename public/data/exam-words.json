@@ -1,0 +1,5026 @@
+[
+  {
+    "id": "builtin-gaokao:award-b4009662c011",
+    "term": "award",
+    "meaning": "n. 奖项；奖品；奖金；v. 授予；颁发",
+    "phonetic": "əˈwɔːd",
+    "variants": [
+      "award sb. sth.",
+      "be awarded sth.",
+      "awards",
+      "awarding",
+      "awarded"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:active-96879611650f",
+    "term": "active",
+    "meaning": "adj. 活跃的；积极的；主动的",
+    "phonetic": "ˈæktɪv",
+    "variants": [
+      "activity",
+      "actively",
+      "inactive"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:skating-b8aa64f3ccf3",
+    "term": "skating",
+    "meaning": "n. 滑冰；溜冰",
+    "phonetic": "ˈskeɪtɪŋ",
+    "variants": [
+      "skate",
+      "skater"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:surfing-6bbed1b598cd",
+    "term": "surfing",
+    "meaning": "n. 冲浪；冲浪运动",
+    "phonetic": "ˈsɜːfɪŋ",
+    "variants": [
+      "surf",
+      "surfer"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:final-2443630b4620",
+    "term": "final",
+    "meaning": "adj. 最后的；最终的",
+    "phonetic": "ˈfaɪnl",
+    "variants": [
+      "finally",
+      "finalist"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fairy-5a81e6aa7556",
+    "term": "fairy",
+    "meaning": "n. 仙女；小精灵；adj. 仙女的；童话中的",
+    "phonetic": "ˈfeəri",
+    "variants": [
+      "fairies",
+      "fairy tale"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hurt-49002d515d16",
+    "term": "hurt",
+    "meaning": "v. 使受伤；使疼痛；伤害；adj. 受伤的；n. 伤害；痛苦",
+    "phonetic": "hɜːt",
+    "variants": [
+      "hurtful",
+      "be hurt",
+      "hurts",
+      "hurting"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:heat-5a2a0ed9aa3a",
+    "term": "heat",
+    "meaning": "n. 热；高温；热量；v. 加热；变热",
+    "phonetic": "hiːt",
+    "variants": [
+      "heated",
+      "heating",
+      "heats"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:reach-ed4561f685f1",
+    "term": "reach",
+    "meaning": "v. 到达；达到；伸手够到；n. 伸手可及的距离；范围",
+    "phonetic": "riːtch",
+    "variants": [
+      "reachable",
+      "reach for",
+      "within reach",
+      "out of reach",
+      "reaches",
+      "reaching",
+      "reached"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:relate-e78618f499c4",
+    "term": "relate",
+    "meaning": "v. 联系；使有联系；讲述；涉及",
+    "phonetic": "rɪˈleɪt",
+    "variants": [
+      "related",
+      "relation",
+      "relationship",
+      "relate to",
+      "relates",
+      "relating"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:disease-b8e8c313b671",
+    "term": "disease",
+    "meaning": "n. 疾病",
+    "phonetic": "dɪˈziːz",
+    "variants": [
+      "diseased",
+      "diseases"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:dangerous-7eaa968417c5",
+    "term": "dangerous",
+    "meaning": "adj. 危险的；不安全的；引起危险的",
+    "phonetic": "ˈdeɪndʒərəs",
+    "variants": [
+      "danger",
+      "dangerously"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:express-008231aaf999",
+    "term": "express",
+    "meaning": "v. 表达；表示；adj. 特快的；n. 快车；快递服务",
+    "phonetic": "ɪkˈspres",
+    "variants": [
+      "expression",
+      "expressive",
+      "expresses",
+      "expressing",
+      "expressed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:energy-381cfb6e1e42",
+    "term": "energy",
+    "meaning": "n. 能量；精力；活力；能源",
+    "phonetic": "ˈenədʒi",
+    "variants": [
+      "energetic"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:prevent-b4d5a180d618",
+    "term": "prevent",
+    "meaning": "v. 阻止；阻碍；妨碍；预防",
+    "phonetic": "prɪˈvent",
+    "variants": [
+      "prevention",
+      "prevent...from doing",
+      "prevents",
+      "preventing",
+      "prevented"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:protest-23e6783b47f8",
+    "term": "protest",
+    "meaning": "n. 抗议；反对；v. 抗议；申辩",
+    "phonetic": "ˈprəʊtest",
+    "variants": [
+      "protester",
+      "protests",
+      "protesting",
+      "protested"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:challenge-2dd00bd77e02",
+    "term": "challenge",
+    "meaning": "n. 挑战；艰巨任务；v. 向……挑战；质疑",
+    "phonetic": "ˈtʃælɪndʒ",
+    "variants": [
+      "challenging",
+      "challenger",
+      "challenges",
+      "challenged"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:curious-a9e7a8af89a3",
+    "term": "curious",
+    "meaning": "adj. 好奇的；求知欲强的；稀奇的",
+    "phonetic": "ˈkjʊəriəs",
+    "variants": [
+      "curiosity",
+      "curiously",
+      "be curious about"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:address-d80c9bf910f1",
+    "term": "address",
+    "meaning": "n. 地址；演讲；v. 写姓名地址；向……讲话；处理",
+    "phonetic": "əˈdres",
+    "variants": [
+      "addressed",
+      "addressing",
+      "addresses"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:appear-adf5a890f0ae",
+    "term": "appear",
+    "meaning": "v. 出现；显得；似乎",
+    "phonetic": "əˈpɪə(r)",
+    "variants": [
+      "appearance",
+      "disappear",
+      "appears",
+      "appearing",
+      "appeared"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:ancient-41dda3b2113b",
+    "term": "ancient",
+    "meaning": "adj. 古老的；古代的；远古的；年老的",
+    "phonetic": "ˈeɪnʃənt",
+    "variants": [
+      "ancient times",
+      "ancient civilization"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:swimming-7aab06cd90b6",
+    "term": "swimming",
+    "meaning": "n. 游泳；游泳运动",
+    "phonetic": "ˈswɪmɪng",
+    "variants": [
+      "swimmings"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:friend-cde48537ca2c",
+    "term": "friend",
+    "meaning": "n. 朋友；友人",
+    "phonetic": "frɪnd",
+    "variants": [
+      "friendly",
+      "friendship",
+      "friends"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hungry-ca4176138ea4",
+    "term": "hungry",
+    "meaning": "adj. 饥饿的；渴望的",
+    "phonetic": "ˈhʌngri",
+    "variants": [
+      "hunger",
+      "hungrily"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:recent-034a7e52c5c9",
+    "term": "recent",
+    "meaning": "adj. 最近的；新近的；近代的",
+    "phonetic": "ˈriːsənt",
+    "variants": [
+      "recently"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:disappear-ed142ddaa38e",
+    "term": "disappear",
+    "meaning": "v. 消失；不见；失踪；绝迹",
+    "phonetic": "ˌdɪsəˈpɪə(r)",
+    "variants": [
+      "appearance",
+      "disappearance",
+      "disappears",
+      "disappearing",
+      "disappeared"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:expensive-f3cca575ff7e",
+    "term": "expensive",
+    "meaning": "adj. 昂贵的；花钱多的",
+    "phonetic": "ɪkˈspensɪv",
+    "variants": [
+      "expense",
+      "inexpensive"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:protect-680dce633db1",
+    "term": "protect",
+    "meaning": "v. 保护；防护；保卫；给…… 投保",
+    "phonetic": "prəˈtekt",
+    "variants": [
+      "protection",
+      "protective",
+      "protect...from/against",
+      "protects",
+      "protecting",
+      "protected"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:creative-828febb7609a",
+    "term": "creative",
+    "meaning": "adj. 有创造力的；创造性的；有创意",
+    "phonetic": "kriˈeɪtɪv",
+    "variants": [
+      "create",
+      "creation",
+      "creativity"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:apology-e161201db018",
+    "term": "apology",
+    "meaning": "n. 道歉",
+    "phonetic": "əˈpɒlədʒi",
+    "variants": [
+      "apologize",
+      "make an apology",
+      "apologies"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:shopping-1180412af43d",
+    "term": "shopping",
+    "meaning": "n. 购物",
+    "phonetic": "ˈshɒpɪng",
+    "variants": [
+      "shop",
+      "go shopping"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:finish-42af43e3616e",
+    "term": "finish",
+    "meaning": "v. 完成；结束；n. 结尾；完成",
+    "phonetic": "ˈfɪnɪsh",
+    "variants": [
+      "finish doing",
+      "finishes",
+      "finishing",
+      "finished"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:happy-489f719cadf9",
+    "term": "happy",
+    "meaning": "adj. 开心的；快乐的",
+    "phonetic": "ˈhæpi",
+    "variants": [
+      "happily",
+      "happiness",
+      "unhappy"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:return-7187f0675eb3",
+    "term": "return",
+    "meaning": "v. 返回；归还；报答；n. 返回；归还；回报",
+    "phonetic": "rɪˈtɜːn",
+    "variants": [
+      "return to",
+      "return sth. to sb.",
+      "returns",
+      "returning",
+      "returned"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:department-2ad29f65743a",
+    "term": "department",
+    "meaning": "n. 部门；系；科；处；局",
+    "phonetic": "dɪˈpɑːtmənt",
+    "variants": [
+      "departmental",
+      "departments"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:encourage-0e970e43d0c1",
+    "term": "encourage",
+    "meaning": "v. 鼓励；鼓舞；怂恿；促进；激发",
+    "phonetic": "ɪnˈkʌrɪdʒ",
+    "variants": [
+      "encouragement",
+      "encouraging",
+      "encourage sb. to do",
+      "encourages",
+      "encouraged"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:proceed-119792136aa2",
+    "term": "proceed",
+    "meaning": "v. 开始行动；继续进行；开展",
+    "phonetic": "prəʊˈsiːd",
+    "variants": [
+      "procedure",
+      "proceed with",
+      "proceed to do",
+      "proceeds",
+      "proceeding",
+      "proceeded"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:celebration-5c7871235e7e",
+    "term": "celebration",
+    "meaning": "n. 庆祝；庆祝活动；颂扬",
+    "phonetic": "ˌselɪˈbreɪshn",
+    "variants": [
+      "celebrate",
+      "celebrations"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:advantage-7db0558a5cda",
+    "term": "advantage",
+    "meaning": "n. 优势；优点；有利条件",
+    "phonetic": "ˌædvəˈntɑːdʒ",
+    "variants": [
+      "disadvantage",
+      "take advantage of",
+      "advantages"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:addition-77f930e4b1a5",
+    "term": "addition",
+    "meaning": "n. 增加；加法；附加物；补充物",
+    "phonetic": "əˈdɪʃn",
+    "variants": [
+      "add",
+      "additional",
+      "in addition",
+      "additions"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:distance-63e6ce93e1bc",
+    "term": "distance",
+    "meaning": "n. 距离；间距；远处；远方；疏远",
+    "phonetic": "ˈdɪstəns",
+    "variants": [
+      "distant",
+      "in the distance",
+      "distances"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:important-34a989eb3e22",
+    "term": "important",
+    "meaning": "adj. 重要的；重大的；有影响的；有地位的",
+    "phonetic": "imˈpɔːtənt",
+    "variants": [
+      "importance",
+      "importantly"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:appeal-da7e2d4b40b6",
+    "term": "appeal",
+    "meaning": "n. 呼吁；吸引力；上诉；v. 呼吁；吸引；上诉",
+    "phonetic": "əˈpiːl",
+    "variants": [
+      "appealing",
+      "appeal to",
+      "appeals",
+      "appealed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:history-259aa8ef98a8",
+    "term": "history",
+    "meaning": "n. 历史；历史学；历史课",
+    "phonetic": "ˈhɪstri",
+    "variants": [
+      "historic",
+      "historical",
+      "histories"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:different-9d6f965ac832",
+    "term": "different",
+    "meaning": "adj. 不同的；各式各样的；个别的；不平常的",
+    "phonetic": "ˈdɪfrənt",
+    "variants": [
+      "difference",
+      "differ",
+      "differently",
+      "be different from"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:information-dea7111a8406",
+    "term": "information",
+    "meaning": "n. 信息；消息；情报；资料；通知",
+    "phonetic": "ˌɪnfəˈmeɪʃn",
+    "variants": [
+      "inform",
+      "informative",
+      "a piece of information"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:store-824d80d71985",
+    "term": "store",
+    "meaning": "n. 商店；仓库；储备；v. 储存；存放",
+    "phonetic": "stɔː(r)",
+    "variants": [
+      "storage",
+      "stores",
+      "storing",
+      "stored"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:heavy-22d5925ed646",
+    "term": "heavy",
+    "meaning": "adj. 重的；沉的；（在数量、程度等方面）超出一般的，比一般严重的；大而结实的；充满（某物）的；（心情）沉重的；（雨、雪等）下得大的；费力的；（呼吸）粗重的",
+    "phonetic": "ˈhevi",
+    "variants": [
+      "heavily"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:summer-e83664255c69",
+    "term": "summer",
+    "meaning": "n. 夏天；夏季",
+    "phonetic": "ˈsʌmə(r)",
+    "variants": [
+      "summers"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sunny-c2333a7e3a60",
+    "term": "sunny",
+    "meaning": "adj. 阳光充足的；晴朗的；快活的；开朗的",
+    "phonetic": "ˈsʌni",
+    "variants": [
+      "sun"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:family-d34a569ab7aa",
+    "term": "family",
+    "meaning": "n. 家人；家庭；亲属；家族",
+    "phonetic": "ˈfæməli",
+    "variants": [
+      "families"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:favor-df2fc6e9c627",
+    "term": "favor",
+    "meaning": "n. 帮助；好事；恩惠；赞同；支持；偏袒；偏爱",
+    "phonetic": "ˈfeɪvə(r)",
+    "variants": [
+      "favorable",
+      "favorite",
+      "do sb. a favor",
+      "favors"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:service-9df6b026a8c6",
+    "term": "service",
+    "meaning": "n. 服务；服侍",
+    "phonetic": "ˈsɜːvɪs",
+    "variants": [
+      "serve",
+      "servant",
+      "be of service",
+      "services"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:season-8f8e24f65c57",
+    "term": "season",
+    "meaning": "n. 季节",
+    "phonetic": "ˈsiːzn",
+    "variants": [
+      "seasonal",
+      "seasons"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:match-4945a70fa7f9",
+    "term": "match",
+    "meaning": "n. 比赛；火柴；相配的人或物；v. 相配；匹配",
+    "phonetic": "mætʃ",
+    "variants": [
+      "match...with",
+      "matches",
+      "matching",
+      "matched"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:much-543b1c4bd4f6",
+    "term": "much",
+    "meaning": "adv. 非常；很；pron. 许多；大量",
+    "phonetic": "mʌtʃ",
+    "variants": [
+      "more",
+      "most"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:attack-fca30679635b",
+    "term": "attack",
+    "meaning": "n. 攻击；袭击；v. 攻击；抨击；侵袭",
+    "phonetic": "əˈtæk",
+    "variants": [
+      "attacker",
+      "attacks",
+      "attacking",
+      "attacked"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:attempt-c7ce66d0fb14",
+    "term": "attempt",
+    "meaning": "n. 尝试；企图；v. 尝试；试图",
+    "phonetic": "əˈtempt",
+    "variants": [
+      "attempt to do",
+      "make an attempt",
+      "attempts",
+      "attempting",
+      "attempted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:invitation-a3013c082c75",
+    "term": "invitation",
+    "meaning": "n. 邀请；请柬；请帖；诱因；招致；鼓励",
+    "phonetic": "ˌɪnvɪˈteɪʃn",
+    "variants": [
+      "invite",
+      "invite sb. to",
+      "invitations"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:inspiration-be2c9ce17278",
+    "term": "inspiration",
+    "meaning": "n. 灵感；鼓舞人心的人（或事物）",
+    "phonetic": "ˌɪnspɪˈreɪʃn",
+    "variants": [
+      "inspire",
+      "inspired",
+      "inspiring",
+      "inspirations"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:interesting-637ab2808704",
+    "term": "interesting",
+    "meaning": "adj. 有趣的；有意思的；引起兴趣的；令人关注的",
+    "phonetic": "ˈɪntrəstɪŋ",
+    "variants": [
+      "interest",
+      "interested",
+      "be interested in"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:arrive-6dc09a300747",
+    "term": "arrive",
+    "meaning": "v. 到达；抵达；送达；发生；（时间）到来",
+    "phonetic": "əˈraɪv",
+    "variants": [
+      "arrival",
+      "arrive at",
+      "arrive in",
+      "arrives",
+      "arriving",
+      "arrived"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:home-4ea140588150",
+    "term": "home",
+    "meaning": "n. 家；住宅；家乡",
+    "phonetic": "həʊm",
+    "variants": [
+      "homeless",
+      "hometown",
+      "at home",
+      "homes"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:summary-761b7ad8ad43",
+    "term": "summary",
+    "meaning": "n. 总结；概要；摘要",
+    "phonetic": "ˈsʌməri",
+    "variants": [
+      "summarize",
+      "in summary",
+      "summaries"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:foreign-656771905e1e",
+    "term": "foreign",
+    "meaning": "adj. 外国的；涉外的；外交的；外来的；陌生的",
+    "phonetic": "ˈfɔːrən",
+    "variants": [
+      "foreigner"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:search-241932906782",
+    "term": "search",
+    "meaning": "n. 搜寻；搜索；v. 搜寻；搜查",
+    "phonetic": "sɜːtʃ",
+    "variants": [
+      "search for",
+      "in search of",
+      "searches",
+      "searching",
+      "searched"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:such-a5c935d142e9",
+    "term": "such",
+    "meaning": "det./pron. 这样的；如此的；这类事物",
+    "phonetic": "sʌtʃ",
+    "variants": [
+      "such as",
+      "such...that"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:apologize-0d7925903f3e",
+    "term": "apologize",
+    "meaning": "v. 道歉；谢罪；认错",
+    "phonetic": "əˈpɔːlədʒaɪz",
+    "variants": [
+      "apology",
+      "apologize to sb. for sth.",
+      "apologizes",
+      "apologizing",
+      "apologized"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:purpose-81b06df4303e",
+    "term": "purpose",
+    "meaning": "n. 目的；意图；用途；目标",
+    "phonetic": "ˈpɜːpəs",
+    "variants": [
+      "purposeful",
+      "on purpose",
+      "for the purpose of",
+      "purposes"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:inclusion-e18ba6a80493",
+    "term": "inclusion",
+    "meaning": "n. 包含；包括；内含物",
+    "phonetic": "ɪnˈkluːʒn",
+    "variants": [
+      "include",
+      "including",
+      "inclusive",
+      "inclusions"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:attend-192f9a06d1dd",
+    "term": "attend",
+    "meaning": "v. 出席；参加；照料；专心",
+    "phonetic": "əˈtend",
+    "variants": [
+      "attendance",
+      "attention",
+      "attend to",
+      "attends",
+      "attending",
+      "attended"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hurry-f6002cbceb8c",
+    "term": "hurry",
+    "meaning": "n. 匆忙；急忙；v. 匆忙；催促",
+    "phonetic": "ˈhʌri",
+    "variants": [
+      "hurried",
+      "hurry up",
+      "in a hurry",
+      "hurries",
+      "hurrying"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:suddenly-18204974997e",
+    "term": "suddenly",
+    "meaning": "adv. 突然；忽然；猛地；骤然；突然地；忽然地",
+    "phonetic": "ˈsʌdənli",
+    "variants": [
+      "sudden"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:festival-8ffaaf97add8",
+    "term": "festival",
+    "meaning": "n. 节日；节期；庆祝活动",
+    "phonetic": "ˈfestɪvl",
+    "variants": [
+      "festivals"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:select-b1a36d25d963",
+    "term": "select",
+    "meaning": "v. 挑选；选拔；选择",
+    "phonetic": "sɪˈlekt",
+    "variants": [
+      "selection",
+      "selective",
+      "selects",
+      "selecting",
+      "selected"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:catch-9f925cdc4fee",
+    "term": "catch",
+    "meaning": "v. 赶上；接住；抓住；逮住；捕捉；感染（疾病）",
+    "phonetic": "kætʃ",
+    "variants": [
+      "caught",
+      "catch up with",
+      "catches",
+      "catching"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:amplify-29e60c5e58d1",
+    "term": "amplify",
+    "meaning": "v. 放大；增强；扩大",
+    "phonetic": "ˈæmplɪfaɪ",
+    "variants": [
+      "amplification",
+      "amplifies",
+      "amplifying",
+      "amplified"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:imagination-ec3d00212250",
+    "term": "imagination",
+    "meaning": "n. 想象；想象力；空想；幻想；设想",
+    "phonetic": "ɪˌmædʒɪˈneɪʃn",
+    "variants": [
+      "imagine",
+      "imaginative",
+      "imaginations"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:terrible-fcfebb572f03",
+    "term": "terrible",
+    "meaning": "adj. 糟糕的；可怕的；非常讨厌的；令人极不愉快的；危害极大的",
+    "phonetic": "ˈterəbl",
+    "variants": [
+      "terribly"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:wealthy-093a169186a7",
+    "term": "wealthy",
+    "meaning": "adj. 富有的；富裕的；丰富的；大量的",
+    "phonetic": "ˈwelθi",
+    "variants": [
+      "wealth"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fighting-b84707239ea1",
+    "term": "fighting",
+    "meaning": "n. 战斗；打斗；斗争；adj. 战斗的",
+    "phonetic": "ˈfaɪtɪŋ",
+    "variants": [
+      "fight",
+      "fighter"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:busy-c9bc072f4fa8",
+    "term": "busy",
+    "meaning": "adj. 忙碌的；繁忙的",
+    "phonetic": "ˈbɪzi",
+    "variants": [
+      "business",
+      "be busy doing"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fierce-c0eb0109f31b",
+    "term": "fierce",
+    "meaning": "adj. 凶猛的；激烈的；猛烈的；凶狠的；狂热的",
+    "phonetic": "fɪəs",
+    "variants": [
+      "fiercely"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fire-dc9f28b12dd1",
+    "term": "fire",
+    "meaning": "n. 火；火灾；v. 开火；解雇；激发",
+    "phonetic": "ˈfaɪə(r)",
+    "variants": [
+      "on fire",
+      "firefighter",
+      "fires",
+      "firing",
+      "fired"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:trust-f796e2f28ae5",
+    "term": "trust",
+    "meaning": "n. 信任；信赖；v. 信任；信赖",
+    "phonetic": "trʌst",
+    "variants": [
+      "trustworthy",
+      "trusts",
+      "trusting",
+      "trusted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:true-b5bea41b6c62",
+    "term": "true",
+    "meaning": "adj. 真实的；正确的；真正的；忠实的",
+    "phonetic": "truː",
+    "variants": [
+      "truth",
+      "truly"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:truth-c5c4bad89ee4",
+    "term": "truth",
+    "meaning": "n. 真理；真相",
+    "phonetic": "truːθ",
+    "variants": [
+      "true",
+      "truthful",
+      "truths"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:exit-e596899f114b",
+    "term": "exit",
+    "meaning": "n. 出口；退出；v. 退出；离开",
+    "phonetic": "ˈeksɪt",
+    "variants": [
+      "entrance",
+      "exits",
+      "exiting",
+      "exited"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:effect-dcb576426a17",
+    "term": "effect",
+    "meaning": "n. 影响；效果；作用；结果",
+    "phonetic": "ɪˈfekt",
+    "variants": [
+      "effective",
+      "effectively",
+      "have an effect on",
+      "effects"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:exhibition-83a2bff84b1d",
+    "term": "exhibition",
+    "meaning": "n. 展览；展览会；展示",
+    "phonetic": "ˌeksɪˈbɪʃn",
+    "variants": [
+      "exhibit",
+      "exhibitions"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:light-99a7026172d4",
+    "term": "light",
+    "meaning": "n. 光；灯；adj. 明亮的；浅色的；轻的；v. 点燃；照亮",
+    "phonetic": "laɪt",
+    "variants": [
+      "lighten",
+      "lightweight",
+      "lights",
+      "lighting",
+      "lighted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sum-09f5ffef2830",
+    "term": "sum",
+    "meaning": "n. 总数；总计",
+    "phonetic": "sʌm",
+    "variants": [
+      "summary",
+      "sum up",
+      "sums"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:charge-97488fbab328",
+    "term": "charge",
+    "meaning": "n. 费用；指控；负责；v. 收费；指控；充电",
+    "phonetic": "tʃɑːdʒ",
+    "variants": [
+      "free of charge",
+      "charge sb. for",
+      "charges",
+      "charging",
+      "charged"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:contest-5c59d0c160a3",
+    "term": "contest",
+    "meaning": "n. 比赛；竞赛；v. 争夺；质疑",
+    "phonetic": "ˈkɒntest",
+    "variants": [
+      "contestant",
+      "contests",
+      "contesting",
+      "contested"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:complain-41aa311d555b",
+    "term": "complain",
+    "meaning": "v. 抱怨；埋怨",
+    "phonetic": "kəmˈpleɪn",
+    "variants": [
+      "complaint",
+      "complain about",
+      "complains",
+      "complaining",
+      "complained"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:habit-09aee23b1fd4",
+    "term": "habit",
+    "meaning": "n. 习惯",
+    "phonetic": "ˈhæbɪt",
+    "variants": [
+      "habitual",
+      "get into a habit",
+      "form a habit",
+      "habits"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:damage-6f5a5c61ccdb",
+    "term": "damage",
+    "meaning": "n. 损害；破坏；v. 损害；破坏",
+    "phonetic": "ˈdæmɪdʒ",
+    "variants": [
+      "damaged",
+      "do damage to",
+      "damages",
+      "damaging"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:historic-c4824ae8bb21",
+    "term": "historic",
+    "meaning": "adj. 有历史意义的；历史性的",
+    "phonetic": "hɪˈstɒrɪk",
+    "variants": [
+      "historical",
+      "history"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:dialogue-abe0ba24dae6",
+    "term": "dialogue",
+    "meaning": "n. 对话；对白",
+    "phonetic": "ˈdaɪəlɒg",
+    "variants": [
+      "dialogues"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:difference-69ea741e98fd",
+    "term": "difference",
+    "meaning": "n. 差异；差别；不同",
+    "phonetic": "ˈdɪfrəns",
+    "variants": [
+      "different",
+      "differ",
+      "make a difference",
+      "differences"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:difficulty-b129ae4200d2",
+    "term": "difficulty",
+    "meaning": "n. 困难；难题",
+    "phonetic": "ˈdɪfɪkəlti",
+    "variants": [
+      "difficult",
+      "have difficulty doing",
+      "difficulties"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:priority-3092a5f0dba0",
+    "term": "priority",
+    "meaning": "n. 优先事项；优先权；重点",
+    "phonetic": "praɪˈɔːrəti",
+    "variants": [
+      "prior",
+      "give priority to",
+      "priorities"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:product-a8792157cb4f",
+    "term": "product",
+    "meaning": "n. 产品",
+    "phonetic": "ˈprɒdʌkt",
+    "variants": [
+      "produce",
+      "production",
+      "productive",
+      "products"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:problem-47a493567208",
+    "term": "problem",
+    "meaning": "n. 问题；难题",
+    "phonetic": "ˈprɒbləm",
+    "variants": [
+      "problematic",
+      "solve a problem",
+      "problems"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:expressive-339f68b4394a",
+    "term": "expressive",
+    "meaning": "adj. 富有表现力的；意味深长的",
+    "phonetic": "ɪkˈspresɪv",
+    "variants": [
+      "express",
+      "expression"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:prejudice-14a62b33decf",
+    "term": "prejudice",
+    "meaning": "n. 偏见；成见",
+    "phonetic": "ˈprejʊdɪs",
+    "variants": [
+      "prejudiced",
+      "prejudices"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:angry-0a96f1960786",
+    "term": "angry",
+    "meaning": "adj. 生气的；愤怒的",
+    "phonetic": "ˈæŋgri",
+    "variants": [
+      "anger",
+      "angrily",
+      "be angry with/about"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fun-00c4285274fc",
+    "term": "fun",
+    "meaning": "n. 乐趣；娱乐；玩笑",
+    "phonetic": "fʌn",
+    "variants": [
+      "funny",
+      "have fun"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:cracker-22f3ae292795",
+    "term": "cracker",
+    "meaning": "n. 薄脆饼干",
+    "phonetic": "ˈkrækə(r)",
+    "variants": [
+      "crackers"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:harmful-58904effcb30",
+    "term": "harmful",
+    "meaning": "adj. 有害的；导致损害的",
+    "phonetic": "ˈhɑːmful",
+    "variants": [
+      "harm",
+      "harmless",
+      "be harmful to"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:dormitory-d852ee03fd93",
+    "term": "dormitory",
+    "meaning": "n. 宿舍；学生宿舍",
+    "phonetic": "ˈdɔːmɪtəri",
+    "variants": [
+      "dormitories"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:picture-2cea274d0bed",
+    "term": "picture",
+    "meaning": "n. 图片；照片",
+    "phonetic": "ˈpɪktʃə(r)",
+    "variants": [
+      "pictures"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:precious-157fc55121ab",
+    "term": "precious",
+    "meaning": "adj. 珍贵的；宝贵的",
+    "phonetic": "ˈpreʃəs",
+    "variants": [
+      "preciously",
+      "preciousness"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:gather-e9da0bd78f29",
+    "term": "gather",
+    "meaning": "v. 聚集；集合；收集；采集",
+    "phonetic": "ˈgæðə(r)",
+    "variants": [
+      "gathering",
+      "gathers",
+      "gathered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:become-9ebb1e6f5b2a",
+    "term": "become",
+    "meaning": "v. 变成；成为",
+    "phonetic": "bɪˈkʌm",
+    "variants": [
+      "became",
+      "becomes",
+      "becoming"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:behind-b1b886ce5f57",
+    "term": "behind",
+    "meaning": "prep./adv. 在……后面；落后于；在背后",
+    "phonetic": "bɪˈhaɪnd",
+    "variants": [
+      "fall behind"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:arm-ddf7ff5ebd9d",
+    "term": "arm",
+    "meaning": "n. 手臂；胳膊",
+    "phonetic": "ɑːm",
+    "variants": [
+      "arms"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hold-e8b22d83b417",
+    "term": "hold",
+    "meaning": "v. 拿住；保持；举行；容纳；n. 抓握；控制",
+    "phonetic": "həuld",
+    "variants": [
+      "held",
+      "hold on",
+      "hold up",
+      "holds",
+      "holding"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:join-58393216032b",
+    "term": "join",
+    "meaning": "v. 加入；参加；连接；结合；联合",
+    "phonetic": "dʒɔɪn",
+    "variants": [
+      "join in",
+      "join sb. in",
+      "joins",
+      "joining",
+      "joined"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:joy-b113405b6f91",
+    "term": "joy",
+    "meaning": "n. 喜悦；快乐；高兴；欢乐",
+    "phonetic": "dʒɔɪ",
+    "variants": [
+      "joyful",
+      "enjoy",
+      "joys"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:never-6497e4b3d7be",
+    "term": "never",
+    "meaning": "adv. 从不",
+    "phonetic": "ˈnevə(r)",
+    "variants": [
+      "never...until"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:near-46ba34770bcc",
+    "term": "near",
+    "meaning": "prep. 靠近；接近；临近",
+    "phonetic": "nɪə(r)",
+    "variants": [
+      "nearby",
+      "nearly"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:major-6558a6a3379d",
+    "term": "major",
+    "meaning": "adj. 主要的；重要的",
+    "phonetic": "ˈmeɪdʒə(r)",
+    "variants": [
+      "majority"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:meal-aec6c3d03f01",
+    "term": "meal",
+    "meaning": "n. 一餐；一顿饭",
+    "phonetic": "miːl",
+    "variants": [
+      "meals"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:telephone-733972515989",
+    "term": "telephone",
+    "meaning": "n. 电话；电话机",
+    "phonetic": "ˈtelɪfəʊn",
+    "variants": [
+      "phone",
+      "telephones"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:current-97b0560280ed",
+    "term": "current",
+    "meaning": "adj. 当前的；流行的；n. 水流；气流；电流",
+    "phonetic": "ˈkʌrənt",
+    "variants": [
+      "currently",
+      "currents"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:century-545a20faf7cb",
+    "term": "century",
+    "meaning": "n. 世纪；百年",
+    "phonetic": "ˈsɛntʃʊri",
+    "variants": [
+      "centuries"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:depend-on-60cd72f34aeb",
+    "term": "depend on",
+    "meaning": "v. 依靠；依赖；信赖",
+    "phonetic": "dɪˈpend ɒn",
+    "variants": [
+      "dependent",
+      "independent",
+      "dependence",
+      "depends on",
+      "depending on",
+      "depended on"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:beautiful-c6a1427d7119",
+    "term": "beautiful",
+    "meaning": "adj. 美丽的；美好的；出色的；巧妙的",
+    "phonetic": "ˈbjuːtɪfl",
+    "variants": [
+      "beauty",
+      "beautifully"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:answer-0db52f4076c0",
+    "term": "answer",
+    "meaning": "n. 回答；答案；v. 回答；答复",
+    "phonetic": "ˈɑːnsə(r)",
+    "variants": [
+      "answer for",
+      "answer the question",
+      "answers",
+      "answering",
+      "answered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:junk-ef875a1705a5",
+    "term": "junk",
+    "meaning": "n. 垃圾",
+    "phonetic": "dʒʌŋk",
+    "variants": [
+      "junk food",
+      "junks"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:next-c6c1c9a9c854",
+    "term": "next",
+    "meaning": "adj. 下一个的；紧接着的；接下来的",
+    "phonetic": "nekst",
+    "variants": [
+      "next to"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:modern-774cdf08f6a8",
+    "term": "modern",
+    "meaning": "adj. 现代的；当代的",
+    "phonetic": "ˈmɒdn",
+    "variants": [
+      "modernize",
+      "modernization"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:touch-f0956726750c",
+    "term": "touch",
+    "meaning": "v. 触摸；接触；感动；n. 触摸；联系",
+    "phonetic": "tʌtʃ",
+    "variants": [
+      "touched",
+      "touching",
+      "keep in touch with",
+      "touches"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:capital-bd08022e8fb8",
+    "term": "capital",
+    "meaning": "n. 首都；资本；大写字母；adj. 主要的；大写的",
+    "phonetic": "ˈkæpɪtl",
+    "variants": [
+      "capital city",
+      "capitals"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:rely-on-cae504ae216e",
+    "term": "rely on",
+    "meaning": "v. 依靠；依赖；信赖",
+    "phonetic": "rɪˈlaɪ ɒn",
+    "variants": [
+      "reliable",
+      "reliability",
+      "relies on",
+      "relying on",
+      "relied on"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:because-a511aeeeb8a1",
+    "term": "because",
+    "meaning": "conj. 因为；由于",
+    "phonetic": "bɪˈkɔːz",
+    "variants": [
+      "because of"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:airport-ccc9ff052aee",
+    "term": "airport",
+    "meaning": "n. 机场；航空港",
+    "phonetic": "ˈeəpɔːt",
+    "variants": [
+      "airports"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:happen-9ecfb3a042a2",
+    "term": "happen",
+    "meaning": "v. 发生；出现；碰巧",
+    "phonetic": "ˈhæpən",
+    "variants": [
+      "happening",
+      "happen to",
+      "happens",
+      "happened"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:jewel-ddc6af1a3242",
+    "term": "jewel",
+    "meaning": "n. 宝石；珠宝首饰",
+    "phonetic": "ˈdʒuːəl",
+    "variants": [
+      "jewelry",
+      "jewellery",
+      "jewels"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:north-dc365e79d41c",
+    "term": "north",
+    "meaning": "n. 北方；adj. 北方的；adv. 向北",
+    "phonetic": "nɔːθ",
+    "variants": [
+      "northern",
+      "norths"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:market-e4d693d24e64",
+    "term": "market",
+    "meaning": "n. 市场；集市",
+    "phonetic": "ˈmɑːkɪt",
+    "variants": [
+      "marketing",
+      "markets"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:together-0c24734d7bf5",
+    "term": "together",
+    "meaning": "adv. 在一起；共同；同时",
+    "phonetic": "təˈɡeðə(r)",
+    "variants": [
+      "get together"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:culture-f1947f79fdfb",
+    "term": "culture",
+    "meaning": "n. 文化；文明",
+    "phonetic": "ˈkʌltʃə(r)",
+    "variants": [
+      "cultural",
+      "cultures"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:eve-85262adf7451",
+    "term": "eve",
+    "meaning": "n. 前夕；前夜",
+    "phonetic": "iːv",
+    "variants": [
+      "on the eve of",
+      "eves"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:even-ec38063c881f",
+    "term": "even",
+    "meaning": "adv. 甚至；即使；还",
+    "phonetic": "ˈiːvən",
+    "variants": [
+      "even if",
+      "even though"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:cheap-c6f556046e0c",
+    "term": "cheap",
+    "meaning": "adj. 便宜的；廉价的",
+    "phonetic": "tʃiːp",
+    "variants": [
+      "cheaper",
+      "cheapest",
+      "cheaply"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:cloudy-5e9562c786d9",
+    "term": "cloudy",
+    "meaning": "adj. 多云的；阴天的",
+    "phonetic": "ˈklaʊdi",
+    "variants": [
+      "cloud"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:food-c1f026582fe6",
+    "term": "food",
+    "meaning": "n. 食物；食品",
+    "phonetic": "fuːd",
+    "variants": [
+      "feed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:feel-116c49130f14",
+    "term": "feel",
+    "meaning": "v. 感觉；觉得；摸起来；n. 感觉；触感",
+    "phonetic": "fiːl",
+    "variants": [
+      "feeling",
+      "felt",
+      "feel like doing",
+      "feels"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:great-87765da6ccf0",
+    "term": "great",
+    "meaning": "adj. 伟大的；极好的；重大的",
+    "phonetic": "ɡreɪt",
+    "variants": [
+      "greater",
+      "greatest",
+      "greatly"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:internet-3b0fe0d342e9",
+    "term": "internet",
+    "meaning": "n. 互联网；因特网",
+    "phonetic": "ˈɪntənet",
+    "variants": [
+      "online",
+      "internets"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:illness-6f4f1b1c9d25",
+    "term": "illness",
+    "meaning": "n. 疾病；病；不健康",
+    "phonetic": "ˈɪlnəs",
+    "variants": [
+      "ill",
+      "illnesses"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:bus-04e027e4990a",
+    "term": "bus",
+    "meaning": "n. 公共汽车；巴士",
+    "phonetic": "bʌs",
+    "variants": [
+      "buses"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:pick-8ce33c6c86e9",
+    "term": "pick",
+    "meaning": "v. 挑选；选择；采摘；拾起",
+    "phonetic": "pɪk",
+    "variants": [
+      "pick up",
+      "pick out",
+      "picks",
+      "picking",
+      "picked"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:past-84ccdf8a849f",
+    "term": "past",
+    "meaning": "n. 过去；adj. 过去的；prep. 经过；超过；adv. 经过",
+    "phonetic": "pɑːst",
+    "variants": [
+      "pass",
+      "in the past",
+      "pasts"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:strange-41b3ab146fd0",
+    "term": "strange",
+    "meaning": "adj. 奇怪的；陌生的；奇特的；不熟悉的；异乡的；外地的",
+    "phonetic": "stræŋdʒ",
+    "variants": [
+      "stranger",
+      "strangely"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:steel-b86262f9bc89",
+    "term": "steel",
+    "meaning": "n. 钢；钢铁",
+    "phonetic": "stiːl",
+    "variants": [
+      "steel industry"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:lantern-c5220b3c4266",
+    "term": "lantern",
+    "meaning": "n. 灯笼；提灯",
+    "phonetic": "ˈlæntən",
+    "variants": [
+      "lanterns"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:lab-a51146d38077",
+    "term": "lab",
+    "meaning": "n. 实验室；实验大楼",
+    "phonetic": "læb",
+    "variants": [
+      "laboratory",
+      "labs"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:recite-16be882827ec",
+    "term": "recite",
+    "meaning": "v. 背诵；朗诵；详述；列举",
+    "phonetic": "rɪˈsaɪt",
+    "variants": [
+      "recitation",
+      "recites",
+      "reciting",
+      "recited"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:repeat-25e2b6b10652",
+    "term": "repeat",
+    "meaning": "v. 重复；重说；重做",
+    "phonetic": "rɪˈpiːt",
+    "variants": [
+      "repeated",
+      "repeatedly",
+      "repetition",
+      "repeats",
+      "repeating"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:colorful-22040cde5778",
+    "term": "colorful",
+    "meaning": "adj. 色彩鲜艳的；丰富多彩的",
+    "phonetic": "ˈkʌləfl",
+    "variants": [
+      "color",
+      "colorless"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:feet-a5add1365529",
+    "term": "feet",
+    "meaning": "n. 脚（foot 的复数形式）",
+    "phonetic": "fiːt",
+    "variants": [
+      "foot"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:guess-f1abe1b083d1",
+    "term": "guess",
+    "meaning": "v. 猜测；推测；n. 猜测",
+    "phonetic": "ɡes",
+    "variants": [
+      "guesses",
+      "guessing",
+      "guessed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:international-1e3bb894756f",
+    "term": "international",
+    "meaning": "adj. 国际的",
+    "phonetic": "ˌɪntəˈnæʃnəl",
+    "variants": [
+      "nation",
+      "national",
+      "internationally"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:business-11d404179596",
+    "term": "business",
+    "meaning": "n. 商业；生意",
+    "phonetic": "ˈbɪznəs",
+    "variants": [
+      "businessman",
+      "businesswoman"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:pity-8c0706c0a8dc",
+    "term": "pity",
+    "meaning": "n. 同情；怜悯；可惜的事；憾事",
+    "phonetic": "ˈpɪti",
+    "variants": [
+      "pity sb.",
+      "what a pity"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:suitable-2d92fc5142e6",
+    "term": "suitable",
+    "meaning": "adj. 合适的；适宜的",
+    "phonetic": "ˈsuːtəbl",
+    "variants": [
+      "suit",
+      "be suitable for"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:library-b718f1354f72",
+    "term": "library",
+    "meaning": "n. 图书馆",
+    "phonetic": "ˈlaɪbrəri",
+    "variants": [
+      "librarian",
+      "libraries"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:research-66f62d1807d3",
+    "term": "research",
+    "meaning": "n. 研究；调查；v. 研究；调查",
+    "phonetic": "rɪˈsɜːtʃ",
+    "variants": [
+      "researcher",
+      "do research",
+      "conduct research",
+      "researches",
+      "researching",
+      "researched"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:common-92a5dc04bd6f",
+    "term": "common",
+    "meaning": "adj. 常见的；普通的",
+    "phonetic": "ˈkɒmən",
+    "variants": [
+      "commonly",
+      "in common"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:foot-22e4f6912a69",
+    "term": "foot",
+    "meaning": "n. 脚",
+    "phonetic": "fʊt",
+    "variants": [
+      "feet",
+      "on foot",
+      "foots"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:gift-a1954b15a745",
+    "term": "gift",
+    "meaning": "n. 礼物；赠品",
+    "phonetic": "ɡɪft",
+    "variants": [
+      "gifted",
+      "gifts"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:buy-e8197b20f8e7",
+    "term": "buy",
+    "meaning": "v. 购买；买；收买；相信",
+    "phonetic": "baɪ",
+    "variants": [
+      "buyer",
+      "buy sth. for sb.",
+      "buys",
+      "buying",
+      "bought"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:post-72231043bc18",
+    "term": "post",
+    "meaning": "n. 邮政；帖子；职位；v. 邮寄；发布",
+    "phonetic": "pəʊst",
+    "variants": [
+      "postman",
+      "post office",
+      "posts",
+      "posting",
+      "posted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sure-c0cafcf0e2d6",
+    "term": "sure",
+    "meaning": "adj. 确信的；确知的",
+    "phonetic": "ʃʊə(r)",
+    "variants": [
+      "surely",
+      "make sure"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:lunar-9738b6bf3ae3",
+    "term": "lunar",
+    "meaning": "adj. 阴历的",
+    "phonetic": "ˈluːnə(r)",
+    "variants": [
+      "lunar calendar"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:respect-0c3e015009e5",
+    "term": "respect",
+    "meaning": "n. 尊敬；尊重；方面；v. 尊敬；遵守",
+    "phonetic": "rɪˈspekt",
+    "variants": [
+      "respectful",
+      "respectable",
+      "respect...for",
+      "respects",
+      "respecting",
+      "respected"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:school-d64debd942d7",
+    "term": "school",
+    "meaning": "n. 学校",
+    "phonetic": "skuːl",
+    "variants": [
+      "schools"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:daily-6f31304cdfd0",
+    "term": "daily",
+    "meaning": "adj. 每日的；日常的；adv. 每日；天天",
+    "phonetic": "ˈdeɪli",
+    "variants": [
+      "every day"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fake-b5d54c39e666",
+    "term": "fake",
+    "meaning": "adj. 假的；伪造的；n. 假货；v. 伪造；假装",
+    "phonetic": "feɪk",
+    "variants": [
+      "fakes",
+      "faking",
+      "faked"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:weather-e5e72beb4e3c",
+    "term": "weather",
+    "meaning": "n. 天气；气象",
+    "phonetic": "ˈweðə(r)",
+    "variants": [
+      "weather forecast",
+      "under the weather"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:campus-42c97db3df4b",
+    "term": "campus",
+    "meaning": "n. 校园；校区",
+    "phonetic": "ˈkæmpəs",
+    "variants": [
+      "campuses",
+      "on campus"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:case-bbfcd4160a1e",
+    "term": "case",
+    "meaning": "n. 情况；实例；事例",
+    "phonetic": "keɪs",
+    "variants": [
+      "cases"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:dairy-7881eddfe386",
+    "term": "dairy",
+    "meaning": "n. 牛奶场",
+    "phonetic": "ˈdeəri",
+    "variants": [
+      "dairy product",
+      "dairies"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:delighted-0e3c2fa7db90",
+    "term": "delighted",
+    "meaning": "adj. 高兴的；愉快的",
+    "phonetic": "dɪˈlaɪtɪd",
+    "variants": [
+      "delight",
+      "delightful",
+      "be delighted with/to"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fellow-a57c4e7933ce",
+    "term": "fellow",
+    "meaning": "n. 同事；同伴",
+    "phonetic": "ˈfeləʊ",
+    "variants": [
+      "fellows"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fan-e29a7f31cac0",
+    "term": "fan",
+    "meaning": "n. 风扇；扇子；迷；v. 扇风",
+    "phonetic": "fæn",
+    "variants": [
+      "be a fan of",
+      "fans",
+      "fanning",
+      "fanned"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:whether-3509fd899235",
+    "term": "whether",
+    "meaning": "conj. 是否",
+    "phonetic": "ˈweðə(r)",
+    "variants": [
+      "whether...or not"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:wire-9b2abfc29cc4",
+    "term": "wire",
+    "meaning": "n. 金属丝；电线",
+    "phonetic": "ˈwaɪə(r)",
+    "variants": [
+      "wireless",
+      "wires"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:rainy-7b9e10dfed02",
+    "term": "rainy",
+    "meaning": "adj. 下雨的；多雨的",
+    "phonetic": "ˈreɪni",
+    "variants": [
+      "rain"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:windy-87480c5a4819",
+    "term": "windy",
+    "meaning": "adj. 有风的；多风的",
+    "phonetic": "ˈwɪndi",
+    "variants": [
+      "wind"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:era-49eaab7e75d9",
+    "term": "era",
+    "meaning": "n. 时代；年代",
+    "phonetic": "ˈɪrə",
+    "variants": [
+      "eras"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:event-b8e1f80bd70a",
+    "term": "event",
+    "meaning": "n. 事件；大事",
+    "phonetic": "ɪˈvent",
+    "variants": [
+      "eventful",
+      "events"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:earn-cf07a76f9384",
+    "term": "earn",
+    "meaning": "v. 赚得；挣得",
+    "phonetic": "ɜːn",
+    "variants": [
+      "earnings",
+      "earn a living",
+      "earns",
+      "earning",
+      "earned"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:speak-21e5205f73d9",
+    "term": "speak",
+    "meaning": "v. 讲；说；说话",
+    "phonetic": "spiːk",
+    "variants": [
+      "speaker",
+      "speech",
+      "spoken",
+      "speaks",
+      "speaking",
+      "spoke"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:spend-f64a33ff88c3",
+    "term": "spend",
+    "meaning": "v. 花费",
+    "phonetic": "spend",
+    "variants": [
+      "spent",
+      "spend...on",
+      "spend...doing",
+      "spends",
+      "spending"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sight-b991a49b1b0a",
+    "term": "sight",
+    "meaning": "n. 视力；视觉",
+    "phonetic": "saɪt",
+    "variants": [
+      "sightseeing",
+      "at first sight",
+      "catch sight of",
+      "sights"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:premier-672a81ef923e",
+    "term": "premier",
+    "meaning": "n. 总理；首相；adj. 首要的；最著名的",
+    "phonetic": "ˈpremiə(r)",
+    "variants": [
+      "premiership",
+      "premiers"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:passive-a7f1d7bc2124",
+    "term": "passive",
+    "meaning": "adj. 被动的；消极的；顺从的",
+    "phonetic": "ˈpæsɪv",
+    "variants": [
+      "passively",
+      "passivity",
+      "active"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:painful-5f5f253e21eb",
+    "term": "painful",
+    "meaning": "adj. 疼痛的；痛苦的；令人不快的",
+    "phonetic": "ˈpeɪnfl",
+    "variants": [
+      "pain",
+      "painfully",
+      "painless"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:step-3e64cc41cf8e",
+    "term": "step",
+    "meaning": "n. 步；脚步；步骤；台阶；级别",
+    "phonetic": "step",
+    "variants": [
+      "step by step",
+      "take steps to",
+      "steps"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:suburb-c47a58e12937",
+    "term": "suburb",
+    "meaning": "n. 郊区；城郊",
+    "phonetic": "ˈsʌbɜːb",
+    "variants": [
+      "suburban",
+      "suburbs"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:goal-0304523efff5",
+    "term": "goal",
+    "meaning": "n. 目标；球门；进球得分；目的",
+    "phonetic": "ɡəʊl",
+    "variants": [
+      "achieve a goal",
+      "reach a goal",
+      "goals"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:gateway-4ea5ee68fea0",
+    "term": "gateway",
+    "meaning": "n. 大门；通道",
+    "phonetic": "ˈɡeɪtweɪ",
+    "variants": [
+      "gateway to",
+      "gateways"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:cause-6a7ef1ed9f15",
+    "term": "cause",
+    "meaning": "n. 原因；事业；v. 导致；引起",
+    "phonetic": "kɔːz",
+    "variants": [
+      "cause...to do",
+      "cause of",
+      "causes",
+      "causing",
+      "caused"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:dozen-bed7ef56035a",
+    "term": "dozen",
+    "meaning": "n. 一打；十二个",
+    "phonetic": "ˈdʌzn",
+    "variants": [
+      "dozens of",
+      "dozens"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:field-c0d2856b74d0",
+    "term": "field",
+    "meaning": "n. 田地；领域；牧场；战场；运动场",
+    "phonetic": "fiːld",
+    "variants": [
+      "in the field of",
+      "fields"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:waste-0bb5e9329f19",
+    "term": "waste",
+    "meaning": "n. 浪费；废物；v. 浪费；adj. 废弃的",
+    "phonetic": "weɪst",
+    "variants": [
+      "wasteful",
+      "waste time doing",
+      "wastes",
+      "wasting",
+      "wasted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:earth-7b74b418a352",
+    "term": "earth",
+    "meaning": "n. 地球；陆地；泥土；尘世",
+    "phonetic": "ɜːθ",
+    "variants": [
+      "earthly",
+      "on earth"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:low-6c1ff09db3a7",
+    "term": "low",
+    "meaning": "adj. 低的；矮的；低下的；粗俗的；消沉的",
+    "phonetic": "ləʊ",
+    "variants": [
+      "lower",
+      "lowest"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:along-768c49c9383c",
+    "term": "along",
+    "meaning": "prep. 沿着；顺着",
+    "phonetic": "əˈlɒŋ",
+    "variants": [
+      "along with",
+      "get along with"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:ashamed-b6d9e56c88ad",
+    "term": "ashamed",
+    "meaning": "adj. 惭愧的；羞耻的；害臊的",
+    "phonetic": "əˈʃeɪmd",
+    "variants": [
+      "shame",
+      "shameful",
+      "be ashamed of"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:medical-948dbde67a8e",
+    "term": "medical",
+    "meaning": "adj. 医学的；医疗的；内科的",
+    "phonetic": "ˈmedɪkl",
+    "variants": [
+      "medicine",
+      "medically"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hospital-8afe3c83decf",
+    "term": "hospital",
+    "meaning": "n. 医院",
+    "phonetic": "ˈhɒspɪtl",
+    "variants": [
+      "hospitalize",
+      "hospitals"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:medicine-a82ce870f999",
+    "term": "medicine",
+    "meaning": "n. 药；医学",
+    "phonetic": "ˈmedɪsɪn",
+    "variants": [
+      "medical",
+      "take medicine"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hot-7f5d1618e7d2",
+    "term": "hot",
+    "meaning": "adj. 热的；辣的；热门的",
+    "phonetic": "hɒt",
+    "variants": [
+      "hotter",
+      "hottest",
+      "heat"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:cool-c34045c1a1db",
+    "term": "cool",
+    "meaning": "adj. 凉爽的；冷静的；v. 使凉爽；冷却",
+    "phonetic": "kuːl",
+    "variants": [
+      "cooler",
+      "coolest",
+      "cools",
+      "cooling",
+      "cooled"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:warmth-ecc745a0d5a1",
+    "term": "warmth",
+    "meaning": "n. 温暖；热情；热烈",
+    "phonetic": "wɔːmθ",
+    "variants": [
+      "warm"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:number-12886f9d0005",
+    "term": "number",
+    "meaning": "n. 数字；数量；v. 给……编号；总计",
+    "phonetic": "ˈnʌmbə(r)",
+    "variants": [
+      "a number of",
+      "the number of",
+      "numbers",
+      "numbering",
+      "numbered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:member-e31ab643c44f",
+    "term": "member",
+    "meaning": "n. 成员；会员",
+    "phonetic": "ˈmembə(r)",
+    "variants": [
+      "membership",
+      "members"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:mention-68b9c231ac85",
+    "term": "mention",
+    "meaning": "v. 提到；说起；n. 提及",
+    "phonetic": "ˈmenʃn",
+    "variants": [
+      "not to mention",
+      "mentions",
+      "mentioning",
+      "mentioned"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:stranger-8aca4f36774f",
+    "term": "stranger",
+    "meaning": "n. 陌生人",
+    "phonetic": "ˈstreɪndʒə(r)",
+    "variants": [
+      "strange",
+      "strangers"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:officer-d71f0bd623e5",
+    "term": "officer",
+    "meaning": "n. 军官；警官",
+    "phonetic": "ˈɒfɪsə(r)",
+    "variants": [
+      "office",
+      "official",
+      "officers"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:offer-988180bf0c93",
+    "term": "offer",
+    "meaning": "v. 提供；提出；n. 提议；报价",
+    "phonetic": "ˈɒfə(r)",
+    "variants": [
+      "offer sb. sth.",
+      "offer to do",
+      "offers",
+      "offering",
+      "offered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:office-5cc3f82838ba",
+    "term": "office",
+    "meaning": "n. 办公室；职务；公职；处；局",
+    "phonetic": "ˈɒfɪs",
+    "variants": [
+      "officer",
+      "official",
+      "offices"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:said-fb46c79b7eb7",
+    "term": "said",
+    "meaning": "v. say 的过去式和过去分词：说；讲",
+    "phonetic": "sed",
+    "variants": [
+      "say",
+      "says",
+      "saying"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:save-157dca92e425",
+    "term": "save",
+    "meaning": "v. 节省；挽救；保存；储蓄；解救",
+    "phonetic": "seɪv",
+    "variants": [
+      "saving",
+      "save...from",
+      "saves",
+      "saved"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:safe-8b3369944dd2",
+    "term": "safe",
+    "meaning": "adj. 安全的；可靠的；平安的",
+    "phonetic": "seɪf",
+    "variants": [
+      "safely",
+      "safety"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:certainly-00fd2615de99",
+    "term": "certainly",
+    "meaning": "adv. 当然；必定；无疑；确实",
+    "phonetic": "ˈsɜːtnli",
+    "variants": [
+      "certain",
+      "certainty"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sometimes-28e5c066055a",
+    "term": "sometimes",
+    "meaning": "adv. 有时；间或",
+    "phonetic": "ˈsʌmtaɪmz",
+    "variants": [
+      "sometime",
+      "some time"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:usually-ceb1e2514a1f",
+    "term": "usually",
+    "meaning": "adv. 通常；经常",
+    "phonetic": "ˈjuːʒuəli",
+    "variants": [
+      "usual",
+      "as usual"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:close-310ff200149b",
+    "term": "close",
+    "meaning": "v. 关闭；合上",
+    "phonetic": "kləʊz",
+    "variants": [
+      "closely",
+      "closed",
+      "be close to",
+      "closes",
+      "closing"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:clean-3b066804f6d1",
+    "term": "clean",
+    "meaning": "adj. 干净的；清洁的；v. 打扫；清洁",
+    "phonetic": "kliːn",
+    "variants": [
+      "cleaner",
+      "cleanliness",
+      "cleans",
+      "cleaning",
+      "cleaned"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:understand-f9dc689e6d50",
+    "term": "understand",
+    "meaning": "v. 理解；明白；懂得；获悉",
+    "phonetic": "ˌʌndəˈstænd",
+    "variants": [
+      "understood",
+      "understanding",
+      "misunderstand",
+      "understands"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:unite-0ec19cbd2d3c",
+    "term": "unite",
+    "meaning": "v. 联合；（使）团结；（使）统一",
+    "phonetic": "juːˈnaɪt",
+    "variants": [
+      "unity",
+      "united",
+      "unites",
+      "uniting"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:unique-c2720445a452",
+    "term": "unique",
+    "meaning": "adj. 独特的；独一无二的；稀罕的",
+    "phonetic": "juːˈniːk",
+    "variants": [
+      "uniquely"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:act-f83f07be16e2",
+    "term": "act",
+    "meaning": "v. 行动；表演；起作用；n. 行为；法案；一幕",
+    "phonetic": "ækt",
+    "variants": [
+      "action",
+      "active",
+      "actor",
+      "act as",
+      "acts",
+      "acting",
+      "acted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hospitality-d61d74587224",
+    "term": "hospitality",
+    "meaning": "n. 好客；殷勤；款待",
+    "phonetic": "ˌhɒspɪˈtælɪti",
+    "variants": [
+      "hospitable"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:warm-0f0aa408c183",
+    "term": "warm",
+    "meaning": "adj. 温暖的；热情的；暖和的；热烈的",
+    "phonetic": "wɔːm",
+    "variants": [
+      "warmer",
+      "warmest",
+      "warmly",
+      "warmth"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:melon-a73860a05ec0",
+    "term": "melon",
+    "meaning": "n. 瓜；甜瓜",
+    "phonetic": "ˈmelən",
+    "variants": [
+      "melons"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:supper-64199f675b8b",
+    "term": "supper",
+    "meaning": "n. 晚餐；晚饭",
+    "phonetic": "ˈsʌpə(r)",
+    "variants": [
+      "suppers"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:off-b4dc66dde806",
+    "term": "off",
+    "meaning": "adv./prep./adj. 离开；脱离；休息；停止的",
+    "phonetic": "ɒf",
+    "variants": [
+      "turn off",
+      "take off"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sad-45c9a6614fcc",
+    "term": "sad",
+    "meaning": "adj. 悲伤的；难过的；悲哀的；令人悲痛的",
+    "phonetic": "sæd",
+    "variants": [
+      "sadly",
+      "sadness"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:seldom-efe5d9ec82c3",
+    "term": "seldom",
+    "meaning": "adv. 很少；不常",
+    "phonetic": "ˈseldəm",
+    "variants": [
+      "seldom or never"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:dirty-d0c92c764c56",
+    "term": "dirty",
+    "meaning": "adj. 脏的",
+    "phonetic": "ˈdɜːti",
+    "variants": [
+      "dirt",
+      "dirtier",
+      "dirtiest"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:upset-8b2f40633932",
+    "term": "upset",
+    "meaning": "adj. 心烦的；不安的；v. 使心烦；打乱；弄翻",
+    "phonetic": "ʌpˈset",
+    "variants": [
+      "upsets",
+      "upsetting"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:admit-358970fc5c74",
+    "term": "admit",
+    "meaning": "v. 承认；准许进入",
+    "phonetic": "ədˈmɪt",
+    "variants": [
+      "admission",
+      "admit doing",
+      "be admitted to",
+      "admits",
+      "admitting",
+      "admitted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:advise-bac8ab1286b8",
+    "term": "advise",
+    "meaning": "v. 劝告；建议；通知；告知",
+    "phonetic": "ədˈvaɪz",
+    "variants": [
+      "advice",
+      "advisable",
+      "advise sb. to do",
+      "advises",
+      "advising",
+      "advised"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:day-944c27e5b97a",
+    "term": "day",
+    "meaning": "n. 天；日子",
+    "phonetic": "deɪ",
+    "variants": [
+      "daily",
+      "day by day",
+      "days"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:travel-0209442e115a",
+    "term": "travel",
+    "meaning": "v. 旅行；传播；n. 旅行；游历",
+    "phonetic": "ˈtrævl",
+    "variants": [
+      "traveler",
+      "traveller",
+      "traveling",
+      "travelling",
+      "travels",
+      "traveled"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:try-1e262cd7d110",
+    "term": "try",
+    "meaning": "v. 试图；努力",
+    "phonetic": "traɪ",
+    "variants": [
+      "try to do",
+      "try doing",
+      "tries",
+      "trying",
+      "tried"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:just-b2c66dfd45dd",
+    "term": "just",
+    "meaning": "adv. 仅仅；刚才；正好；adj. 公正的；合理的",
+    "phonetic": "dʒʌst",
+    "variants": [
+      "justice",
+      "just now"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:judge-10e86c6514d4",
+    "term": "judge",
+    "meaning": "n. 法官；裁判；v. 判断；评判",
+    "phonetic": "dʒʌdʒ",
+    "variants": [
+      "judgment",
+      "judgement",
+      "judges",
+      "judging",
+      "judged"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:cover-3fa405a8301a",
+    "term": "cover",
+    "meaning": "v. 覆盖；涉及；报道；n. 封面；盖子；掩护",
+    "phonetic": "ˈkɒvə(r)",
+    "variants": [
+      "coverage",
+      "be covered with",
+      "covers",
+      "covering",
+      "covered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:crowd-5b4535bdd79f",
+    "term": "crowd",
+    "meaning": "n. 人群；群众；v. 挤满；聚集",
+    "phonetic": "kraʊd",
+    "variants": [
+      "crowded",
+      "a crowd of",
+      "crowds",
+      "crowding"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:will-bc16f5825a9d",
+    "term": "will",
+    "meaning": "modal v. 将；会；愿意；n. 意志；决心；遗嘱",
+    "phonetic": "wɪl",
+    "variants": [
+      "willing",
+      "willingly",
+      "be willing to",
+      "wills"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:wish-091e60675261",
+    "term": "wish",
+    "meaning": "n. 愿望；祝愿；v. 希望；祝愿",
+    "phonetic": "wɪʃ",
+    "variants": [
+      "wish to do",
+      "wish sb. sth.",
+      "wishes",
+      "wishing",
+      "wished"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fear-58d54e7c7553",
+    "term": "fear",
+    "meaning": "n. 害怕；恐惧；v. 害怕；担心",
+    "phonetic": "fɪə(r)",
+    "variants": [
+      "fearful",
+      "fearless",
+      "fears",
+      "fearing",
+      "feared"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:hear-49000c4444d5",
+    "term": "hear",
+    "meaning": "v. 听见；听说；审理",
+    "phonetic": "hɪə(r)",
+    "variants": [
+      "heard",
+      "hear from",
+      "hear of",
+      "hears",
+      "hearing"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:ought-15bd52797d7d",
+    "term": "ought",
+    "meaning": "modal v. 应当；应该",
+    "phonetic": "ɔːt",
+    "variants": [
+      "ought to do"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:enough-6f6465f9dd06",
+    "term": "enough",
+    "meaning": "det./pron./adv. 足够的；足够地；充分地",
+    "phonetic": "ɪˈnʌf",
+    "variants": [
+      "enough to do"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:improve-2b35ed6944dd",
+    "term": "improve",
+    "meaning": "v. 改善；改进；提高；变得更好",
+    "phonetic": "ɪmˈpruːv",
+    "variants": [
+      "improvement",
+      "improves",
+      "improving",
+      "improved"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:prove-52dabec35605",
+    "term": "prove",
+    "meaning": "v. 证明；证实；结果是",
+    "phonetic": "pruːv",
+    "variants": [
+      "proof",
+      "proven",
+      "proves",
+      "proving",
+      "proved"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:check-20f65c28671b",
+    "term": "check",
+    "meaning": "v. 检查；核对；n. 检查；支票",
+    "phonetic": "tʃek",
+    "variants": [
+      "check in",
+      "check out",
+      "check...with",
+      "checks",
+      "checking",
+      "checked"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:allow-410083735735",
+    "term": "allow",
+    "meaning": "v. 允许；准许；给予；承认",
+    "phonetic": "əˈlaʊ",
+    "variants": [
+      "allowance",
+      "allow sb. to do",
+      "allows",
+      "allowing",
+      "allowed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:diary-1d7fe146fad6",
+    "term": "diary",
+    "meaning": "n. 日记；日记簿",
+    "phonetic": "ˈdaɪəri",
+    "variants": [
+      "keep a diary",
+      "diaries"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:trip-34a389d790fc",
+    "term": "trip",
+    "meaning": "n. 旅行；绊倒；v. 绊倒",
+    "phonetic": "trɪp",
+    "variants": [
+      "take a trip",
+      "trips",
+      "tripping",
+      "tripped"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:wall-4d8aaa64f685",
+    "term": "wall",
+    "meaning": "n. 墙；墙壁",
+    "phonetic": "wɔːl",
+    "variants": [
+      "walls"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:ear-3c6a36b640fc",
+    "term": "ear",
+    "meaning": "n. 耳朵",
+    "phonetic": "ɪə(r)",
+    "variants": [
+      "ears"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:empty-2e1cfa82b035",
+    "term": "empty",
+    "meaning": "adj. 空的",
+    "phonetic": "ˈempti",
+    "variants": [
+      "emptiness",
+      "empty out"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:find-e6640de835ad",
+    "term": "find",
+    "meaning": "v. 找到；发现；查明；n. 发现物",
+    "phonetic": "faɪnd",
+    "variants": [
+      "found",
+      "find out",
+      "finds",
+      "finding"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:dry-b755cb248c3c",
+    "term": "dry",
+    "meaning": "adj. 干的；干燥的",
+    "phonetic": "draɪ",
+    "variants": [
+      "drier",
+      "driest",
+      "dryness"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:training-c2fb788c7dee",
+    "term": "training",
+    "meaning": "n. 训练；培训；培养",
+    "phonetic": "ˈtreɪnɪŋ",
+    "variants": [
+      "train",
+      "trainer",
+      "trainee"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:chair-3d7eb3d3dab1",
+    "term": "chair",
+    "meaning": "n. 椅子",
+    "phonetic": "tʃeə(r)",
+    "variants": [
+      "chairman",
+      "chairs"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:win-823a3180dad3",
+    "term": "win",
+    "meaning": "v. 赢；获胜",
+    "phonetic": "wɪn",
+    "variants": [
+      "winner",
+      "won",
+      "wins",
+      "winning"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:wear-c47fbc5d87a1",
+    "term": "wear",
+    "meaning": "v. 穿；戴",
+    "phonetic": "weə(r)",
+    "variants": [
+      "wore",
+      "worn",
+      "wear out",
+      "wears",
+      "wearing"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:full-a18b869b2e81",
+    "term": "full",
+    "meaning": "adj. 满的；充满的",
+    "phonetic": "fʊl",
+    "variants": [
+      "fully",
+      "fill",
+      "be full of"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:insert-1e22560cee2c",
+    "term": "insert",
+    "meaning": "v. 插入；嵌入",
+    "phonetic": "ɪnˈsɜːt",
+    "variants": [
+      "insertion",
+      "inserts",
+      "inserting",
+      "inserted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:shop-8d9001d32c6a",
+    "term": "shop",
+    "meaning": "n. 商店；店铺；v. 购物",
+    "phonetic": "ʃɒp",
+    "variants": [
+      "shopping",
+      "shopper",
+      "shops",
+      "shopped"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:show-1c6333509deb",
+    "term": "show",
+    "meaning": "v. 表明；展示；证明；n. 节目；展览",
+    "phonetic": "ʃəʊ",
+    "variants": [
+      "showed",
+      "shown",
+      "show up",
+      "shows",
+      "showing"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:shoe-efda1c925291",
+    "term": "shoe",
+    "meaning": "n. 鞋",
+    "phonetic": "ʃuː",
+    "variants": [
+      "shoes"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:reuse-d9c0d34144c1",
+    "term": "reuse",
+    "meaning": "v. 再利用；重复使用；重新使用",
+    "phonetic": "ˌriːˈjuːz",
+    "variants": [
+      "reusable",
+      "reuses",
+      "reusing",
+      "reused"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:reunion-608af3ec161f",
+    "term": "reunion",
+    "meaning": "n. 团聚；重聚；聚会",
+    "phonetic": "ˌriːˈjuːnɪən",
+    "variants": [
+      "reunite",
+      "reunions"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:retire-9588c4b2e8c1",
+    "term": "retire",
+    "meaning": "v. 退休",
+    "phonetic": "rɪˈtaɪə(r)",
+    "variants": [
+      "retired",
+      "retirement",
+      "retires",
+      "retiring"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:receive-95100519be03",
+    "term": "receive",
+    "meaning": "v. 收到；接到；得到；接待；接纳；承受",
+    "phonetic": "rɪˈsiːv",
+    "variants": [
+      "receiver",
+      "reception",
+      "receives",
+      "receiving",
+      "received"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:receipt-6f32860910ca",
+    "term": "receipt",
+    "meaning": "n. 收据；收条；收到",
+    "phonetic": "rɪˈsiːt",
+    "variants": [
+      "receive",
+      "receipts"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:music-80f189984e5c",
+    "term": "music",
+    "meaning": "n. 音乐；乐曲；乐谱",
+    "phonetic": "ˈmjuːzɪk",
+    "variants": [
+      "musical",
+      "musician"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:film-d0607f7ad262",
+    "term": "film",
+    "meaning": "n. 电影；胶片；v. 拍摄电影",
+    "phonetic": "fɪlm",
+    "variants": [
+      "filmmaker",
+      "films",
+      "filming",
+      "filmed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:message-ab530a13e459",
+    "term": "message",
+    "meaning": "n. 消息；信息",
+    "phonetic": "ˈmesɪdʒ",
+    "variants": [
+      "send a message",
+      "leave a message",
+      "messages"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:mission-ceb00a91525d",
+    "term": "mission",
+    "meaning": "n. 使命；任务",
+    "phonetic": "ˈmɪʃn",
+    "variants": [
+      "missions"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:bathroom-3486577cd905",
+    "term": "bathroom",
+    "meaning": "n. 浴室；卫生间；盥洗室",
+    "phonetic": "ˈbɑːθruːm",
+    "variants": [
+      "bathrooms"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:bedroom-a05e6feb79c8",
+    "term": "bedroom",
+    "meaning": "n. 卧室；寝室",
+    "phonetic": "ˈbedruːm",
+    "variants": [
+      "bedrooms"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:classroom-83d82a74a67a",
+    "term": "classroom",
+    "meaning": "n. 教室",
+    "phonetic": "ˈklɑːsruːm",
+    "variants": [
+      "classrooms"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:restroom-f2ee8db7682b",
+    "term": "restroom",
+    "meaning": "n. 厕所；洗手间；休息室",
+    "phonetic": "ˈrestruːm",
+    "variants": [
+      "restrooms"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:station-9b4ef3e5b7b4",
+    "term": "station",
+    "meaning": "n. 车站；站；v. 驻扎；安置",
+    "phonetic": "ˈsteɪʃn",
+    "variants": [
+      "stations",
+      "stationing",
+      "stationed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:government-ab5e9e376f95",
+    "term": "government",
+    "meaning": "n. 政府；政体",
+    "phonetic": "ˈɡʌvənmənt",
+    "variants": [
+      "govern",
+      "governor",
+      "governments"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:realize-9f6eec7d586f",
+    "term": "realize",
+    "meaning": "v. 意识到；认识到；实现；使变为现实",
+    "phonetic": "ˈriːəlaɪz",
+    "variants": [
+      "realization",
+      "realizes",
+      "realizing",
+      "realized"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:flight-03b6b3e9163d",
+    "term": "flight",
+    "meaning": "n. 航班；飞行",
+    "phonetic": "flaɪt",
+    "variants": [
+      "fly",
+      "flew",
+      "flown",
+      "flights"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fight-23b6a8f399dd",
+    "term": "fight",
+    "meaning": "v. 战斗；打架；争取；n. 战斗；争吵",
+    "phonetic": "faɪt",
+    "variants": [
+      "fighter",
+      "fought",
+      "fights",
+      "fighting"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:shout-b6efa0bad673",
+    "term": "shout",
+    "meaning": "v. 呼喊；喊叫",
+    "phonetic": "ʃaʊt",
+    "variants": [
+      "shout at",
+      "shout to",
+      "shouts",
+      "shouting",
+      "shouted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:reject-084e990a49ba",
+    "term": "reject",
+    "meaning": "v. 拒绝",
+    "phonetic": "rɪˈjekt",
+    "variants": [
+      "rejection",
+      "rejects",
+      "rejecting",
+      "rejected"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:movie-8a6ba32c9bed",
+    "term": "movie",
+    "meaning": "n. 电影；影片",
+    "phonetic": "ˈmuːvi",
+    "variants": [
+      "movies"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:supermarket-16d1c76df24f",
+    "term": "supermarket",
+    "meaning": "n. 超市；超级市场",
+    "phonetic": "ˈsuːpəmɑːkt",
+    "variants": [
+      "supermarkets"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:underground-be74175cb763",
+    "term": "underground",
+    "meaning": "adj. 地下的；adv. 在地下；n. 地铁；地下组织",
+    "phonetic": "ˌʌndəˈɡraʊnd",
+    "variants": [
+      "undergrounds"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:undersea-3158b3a4fbe9",
+    "term": "undersea",
+    "meaning": "adj. 海底的；海面下的",
+    "phonetic": "ˌʌndəˈsiː",
+    "variants": [
+      "undersea tunnel"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sell-c0f21d451463",
+    "term": "sell",
+    "meaning": "v. 卖；出售",
+    "phonetic": "sel",
+    "variants": [
+      "sale",
+      "seller",
+      "sold",
+      "sell out",
+      "sells",
+      "selling"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:sail-d0350a6064de",
+    "term": "sail",
+    "meaning": "v. 航行",
+    "phonetic": "seɪl",
+    "variants": [
+      "sailing",
+      "sailor",
+      "sails",
+      "sailed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:take-d1905cf90af2",
+    "term": "take",
+    "meaning": "v. 拿；取",
+    "phonetic": "teɪk",
+    "variants": [
+      "took",
+      "taken",
+      "take part in",
+      "takes",
+      "taking"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:abroad-a6278590a4ba",
+    "term": "abroad",
+    "meaning": "adv. 在国外",
+    "phonetic": "əˈbrɔːd",
+    "variants": [
+      "go abroad"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:aboard-4fb10800cbee",
+    "term": "aboard",
+    "meaning": "adv./prep. 在船、飞机或车上；上船、飞机或车",
+    "phonetic": "əˈbɔːd",
+    "variants": [
+      "go aboard"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:about-a4262e1c9bcb",
+    "term": "about",
+    "meaning": "prep. 关于；adv. 大约；在周围",
+    "phonetic": "əˈbaʊt",
+    "variants": [
+      "be about to"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:discuss-d6a919ef5362",
+    "term": "discuss",
+    "meaning": "v. 讨论",
+    "phonetic": "dɪˈskʌs",
+    "variants": [
+      "discussion",
+      "discusses",
+      "discussing",
+      "discussed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:distant-5c5777c1c66d",
+    "term": "distant",
+    "meaning": "adj. 远处的",
+    "phonetic": "ˈdɪstənt",
+    "variants": [
+      "distance"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:discover-5b90071aea26",
+    "term": "discover",
+    "meaning": "v. 发现",
+    "phonetic": "dɪˈskəʊv",
+    "variants": [
+      "discovery",
+      "discovers",
+      "discovering",
+      "discovered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:danger-123fd666aa39",
+    "term": "danger",
+    "meaning": "n. 危险",
+    "phonetic": "ˈdæŋɡə(r)",
+    "variants": [
+      "dangerous",
+      "dangers"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:risk-2c6ef0f0d0e4",
+    "term": "risk",
+    "meaning": "n. 风险；危险；v. 冒险；使遭受危险",
+    "phonetic": "rɪsk",
+    "variants": [
+      "risky",
+      "risk doing",
+      "risks",
+      "risking",
+      "risked"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:harm-af3ce03f6874",
+    "term": "harm",
+    "meaning": "n. 伤害；损害；v. 伤害；危害",
+    "phonetic": "hɑːm",
+    "variants": [
+      "harmful",
+      "harmless",
+      "do harm to",
+      "harms",
+      "harming",
+      "harmed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:right-27042f4e6eca",
+    "term": "right",
+    "meaning": "adj. 正确的；合适的；右边的；adv. 正好；向右；n. 权利",
+    "phonetic": "raɪt",
+    "variants": [
+      "rightly",
+      "be right about",
+      "rights"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:comfortable-46fd05f35b55",
+    "term": "comfortable",
+    "meaning": "adj. 舒适的；舒服的",
+    "phonetic": "ˈkʌmfətəbl",
+    "variants": [
+      "comfort",
+      "comfortably",
+      "uncomfortable"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:available-ddd9818abacf",
+    "term": "available",
+    "meaning": "adj. 可获得的；可利用的",
+    "phonetic": "əˈveɪləbl",
+    "variants": [
+      "availability",
+      "be available to"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:trouble-7130df43355e",
+    "term": "trouble",
+    "meaning": "n. 麻烦；困难；烦恼；v. 麻烦；使烦恼",
+    "phonetic": "ˈtrʌbl",
+    "variants": [
+      "troublesome",
+      "have trouble doing",
+      "troubles",
+      "troubling",
+      "troubled"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:double-2ce06a9e7f8c",
+    "term": "double",
+    "meaning": "adj. 双的；两倍的；v. 加倍；翻一番",
+    "phonetic": "ˈdʌbl",
+    "variants": [
+      "doubles",
+      "doubling",
+      "doubled"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:worried-13d9ead0ef6e",
+    "term": "worried",
+    "meaning": "adj. 担心的；担忧的",
+    "phonetic": "ˈwʌrid",
+    "variants": [
+      "worry",
+      "be worried about"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:bored-60e6aa4ad2d3",
+    "term": "bored",
+    "meaning": "adj. 无聊的",
+    "phonetic": "bɔːd",
+    "variants": [
+      "boring",
+      "be bored with"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:press-842fcb5e6098",
+    "term": "press",
+    "meaning": "v. 按；压；催促；n. 新闻界；出版社；按压",
+    "phonetic": "pres",
+    "variants": [
+      "pressure",
+      "presses",
+      "pressing",
+      "pressed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:present-4d4c7eee2e28",
+    "term": "present",
+    "meaning": "adj. 现在的；在场的；n. 礼物；现在；v. 颁发；呈现",
+    "phonetic": "ˈpreznt",
+    "variants": [
+      "presentation",
+      "present sb. with sth.",
+      "at present",
+      "presents",
+      "presenting",
+      "presented"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:promise-3513d9452af7",
+    "term": "promise",
+    "meaning": "v. 承诺；答应；n. 承诺；希望",
+    "phonetic": "ˈprɒmɪs",
+    "variants": [
+      "promising",
+      "promise to do",
+      "keep a promise",
+      "break a promise",
+      "promises",
+      "promised"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:prepare-45666d976bab",
+    "term": "prepare",
+    "meaning": "v. 准备",
+    "phonetic": "prɪˈpeə(r)",
+    "variants": [
+      "preparation",
+      "prepared",
+      "prepare for",
+      "prepares",
+      "preparing"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:credit-ecc4873a1694",
+    "term": "credit",
+    "meaning": "n. 信用；学分；赞扬；v. 把……归功于",
+    "phonetic": "ˈkredɪt",
+    "variants": [
+      "credit card",
+      "to one's credit",
+      "credits",
+      "crediting",
+      "credited"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:create-fa8847b0c331",
+    "term": "create",
+    "meaning": "v. 创造；创作",
+    "phonetic": "kriːˈeɪt",
+    "variants": [
+      "creation",
+      "creative",
+      "creator",
+      "creates",
+      "creating",
+      "created"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:replay-ac203c9843b5",
+    "term": "replay",
+    "meaning": "v. 重放；重演",
+    "phonetic": "ˌriːˈpleɪ",
+    "variants": [
+      "playback",
+      "replays",
+      "replaying",
+      "replayed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:reason-8fcfccf675b1",
+    "term": "reason",
+    "meaning": "n. 原因",
+    "phonetic": "ˈriːzn",
+    "variants": [
+      "reasonable",
+      "reasonably",
+      "reason for",
+      "reasons"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:require-c4d0cf241a1b",
+    "term": "require",
+    "meaning": "v. 需要；要求",
+    "phonetic": "rɪˈkwaɪə(r)",
+    "variants": [
+      "requirement",
+      "require doing",
+      "require sb. to do",
+      "requires",
+      "requiring",
+      "required"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:result-f6a214f7a5fc",
+    "term": "result",
+    "meaning": "n. 结果；成果；v. 导致；产生",
+    "phonetic": "rɪˈzʌlt",
+    "variants": [
+      "result in",
+      "result from",
+      "as a result",
+      "results",
+      "resulting",
+      "resulted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:worry-6de2f53e03e9",
+    "term": "worry",
+    "meaning": "v. 担心；担忧",
+    "phonetic": "ˈwʌri",
+    "variants": [
+      "worried",
+      "worry about",
+      "worries",
+      "worrying"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:tired-c405760daf9b",
+    "term": "tired",
+    "meaning": "adj. 疲倦的",
+    "phonetic": "ˈtaɪəd",
+    "variants": [
+      "tiring",
+      "be tired of",
+      "be tired from"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:weak-481ba4019c9d",
+    "term": "weak",
+    "meaning": "adj. 虚弱的",
+    "phonetic": "wiːk",
+    "variants": [
+      "weakness",
+      "weaken"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:several-2740e59ffb8c",
+    "term": "several",
+    "meaning": "adj. 几个",
+    "phonetic": "ˈsevrəl",
+    "variants": [
+      "several of"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:follow-a3ce0b6106cd",
+    "term": "follow",
+    "meaning": "v. 跟随",
+    "phonetic": "ˈfɒləʊ",
+    "variants": [
+      "following",
+      "follower",
+      "follow up",
+      "follows",
+      "followed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fall-2dc46af1b78c",
+    "term": "fall",
+    "meaning": "v. 落下；跌倒；下降；n. 秋季；下降",
+    "phonetic": "fɔːl",
+    "variants": [
+      "fell",
+      "fallen",
+      "fall down",
+      "falls",
+      "falling"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:enjoy-75fba329cb6e",
+    "term": "enjoy",
+    "meaning": "v. 享受",
+    "phonetic": "ɪnˈdʒɔɪ",
+    "variants": [
+      "enjoyable",
+      "enjoyment",
+      "enjoy doing",
+      "enjoys",
+      "enjoying",
+      "enjoyed"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:love-686f746a95b6",
+    "term": "love",
+    "meaning": "v. 爱；喜爱；n. 爱；热爱",
+    "phonetic": "lʌv",
+    "variants": [
+      "lovely",
+      "loving",
+      "fall in love with",
+      "loves",
+      "loved"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:meet-8ccb033c0e48",
+    "term": "meet",
+    "meaning": "v. 遇见；碰见",
+    "phonetic": "miːt",
+    "variants": [
+      "met",
+      "meeting",
+      "meets"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:share-c3bc45ac352f",
+    "term": "share",
+    "meaning": "v. 分享；分担；n. 份额；股份",
+    "phonetic": "ʃeə(r)",
+    "variants": [
+      "share...with",
+      "shares",
+      "sharing",
+      "shared"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:collect-81824c90f8a5",
+    "term": "collect",
+    "meaning": "v. 收集；采集",
+    "phonetic": "kəˈlekt",
+    "variants": [
+      "collection",
+      "collector",
+      "collects",
+      "collecting",
+      "collected"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:connect-5a638a128ca6",
+    "term": "connect",
+    "meaning": "v. 连接；联系",
+    "phonetic": "kəˈnekt",
+    "variants": [
+      "connection",
+      "be connected with",
+      "connects",
+      "connecting",
+      "connected"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:consider-2181584795ff",
+    "term": "consider",
+    "meaning": "v. 考虑；认为",
+    "phonetic": "kənˈsɪdə(r)",
+    "variants": [
+      "consideration",
+      "consider doing",
+      "be considered as",
+      "considers",
+      "considering",
+      "considered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:cheer-19051351bb6d",
+    "term": "cheer",
+    "meaning": "v. 欢呼；鼓舞；n. 欢呼声",
+    "phonetic": "tʃɪə(r)",
+    "variants": [
+      "cheerful",
+      "cheer up",
+      "cheers",
+      "cheering",
+      "cheered"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:custom-6cdfd271da63",
+    "term": "custom",
+    "meaning": "n. 风俗；习俗；adj. 定制的",
+    "phonetic": "ˈkʌstəm",
+    "variants": [
+      "customary",
+      "customer",
+      "customs"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:mood-ee0e4f309c9a",
+    "term": "mood",
+    "meaning": "n. 心情；情绪",
+    "phonetic": "muːd",
+    "variants": [
+      "in a good mood",
+      "in a bad mood",
+      "moods"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:feat-9b5caa85b1e5",
+    "term": "feat",
+    "meaning": "n. 功绩；壮举；技艺",
+    "phonetic": "fiːt",
+    "variants": [
+      "feats"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:module-120970d81283",
+    "term": "module",
+    "meaning": "n. 模块；单元",
+    "phonetic": "ˈmɒdjuːl",
+    "variants": [
+      "modular",
+      "modules"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:fell-6acac34da1c9",
+    "term": "fell",
+    "meaning": "v. fall 的过去式：落下；跌倒",
+    "phonetic": "fel",
+    "variants": [
+      "fall",
+      "falls",
+      "falling",
+      "fallen"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:like-cab2644828bc",
+    "term": "like",
+    "meaning": "v. 喜欢；想要；prep. 像；如同",
+    "phonetic": "laɪk",
+    "variants": [
+      "would like to",
+      "likes",
+      "liking",
+      "liked"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  },
+  {
+    "id": "builtin-gaokao:net-a08a0fcbdeaf",
+    "term": "net",
+    "meaning": "n. 网；网络；v. 用网捕；获得",
+    "phonetic": "net",
+    "variants": [
+      "network",
+      "nets",
+      "netting",
+      "netted"
+    ],
+    "tags": [
+      "高考真题词汇"
+    ]
+  }
+]

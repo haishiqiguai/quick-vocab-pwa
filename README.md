@@ -2,7 +2,7 @@
 
 <p align="center"><strong>完美适配「陶大背单词法」</strong> · 让方法有节奏，让复习更顺手</p>
 
-一个本地优先、可离线安装的英汉背单词 PWA。软件采用“Target 快速浏览 → Review 错词回队”的两步学习方式，支持高考内置词库、CSV/XLSX 导入、生词收藏、统计、学习计划与完整本地备份。
+一个本地优先、可离线安装的英汉背单词应用。软件采用“Target 快速浏览 → Review 错词回队”的两步学习方式，内置 357 词高考真题词本和 896 词对口升学复习指导词本，支持 CSV/XLSX 导入、生词收藏、统计、学习计划与完整本地备份。
 
 ## 快速开始
 
@@ -19,9 +19,31 @@ npm.cmd run dev
 
 电脑和手机连接同一路由器后，双击 `start-mobile.cmd`。脚本会同时保留电脑端 `127.0.0.1:4173` 和手机端 `电脑IP:4174`，并显示手机应访问的地址。使用期间请保持脚本窗口和电脑开启；Windows 防火墙询问时需允许专用网络访问。
 
+## 独立安卓 APK
+
+Android 版使用 Capacitor 封装，页面、两本内置词库、Aria 1.0× 英文及晓晓中文 MP3 全部包含在 APK 中。安装后不需要域名、服务器、电脑或网络；导入词本、其他英文语速以及非 Aria 声音会自动使用手机系统语音。
+
+首次构建需安装 Android Studio、Microsoft OpenJDK 21、Android SDK 36 和 FFmpeg（语音校验使用 `ffprobe`）。项目使用忽略提交的 `.android-sdk` 与 `android/local.properties` 固定本机 SDK 路径：
+
+```powershell
+npm.cmd run build:data
+npm.cmd run build:speech
+npm.cmd run android:debug
+```
+
+调试 APK 位于 `android/app/build/outputs/apk/debug/app-debug.apk`。发布版签名配置见 `android/signing.properties.example`；真实密钥和 `android/signing.properties` 不得提交到 Git。
+
+首次发布前运行 `scripts/setup-android-signing.ps1` 生成稳定密钥，再运行 `npm.cmd run android:release`。签名 APK 会按 `package.json` 的版本号复制到 `artifacts/quick-vocab-<版本>-release.apk`（当前为 `quick-vocab-1.0.5-release.apk`）。请把以下两个被 Git 忽略的文件一起备份到加密存储中，且不要随 APK 发送：
+
+- `android/keystore/quick-vocab-release.jks`
+- `android/signing.properties`
+
+丢失密钥或密码后，后续 APK 无法覆盖安装现有应用；只能卸载后重装，并会清除手机本地学习数据。更新时必须继续使用相同包名和这套密钥，安装前仍建议先导出 JSON 备份。
+
 ## 自然朗读与离线语音包
 
 - 默认使用美式 Aria Neural 女声，另提供 Guy 美式男声、Sonia 英式女声和系统语音备用项。
+- Android APK 为两本内置词库同时预装晓晓中文神经语音，五档语速通过本地播放速度调整；导入词由 Android 系统语音兜底。两本重复的英文单词共用音频：英文 1106 条、中文 1253 条。
 - 神经语音由电脑通过 Microsoft Edge Read Aloud 在线服务生成，因此手机和电脑听到的声音一致。
 - 在“设置 → 离线语音包”可下载当前词本、当前声音和当前语速的全部音频；下载完成后电脑断网仍可使用缓存。
 - 缓存位于 `runtime/tts-cache`，不会提交到源码。切换声音或语速后需下载对应的新语音包。
@@ -45,18 +67,20 @@ npm.cmd run test:e2e
 - 无表头文件默认前三列为单词、释义、音标。
 - 模板位于 `public/import-template.csv`，也可从导入页面下载。
 
-## 内置词库再生成
+## 内置词库与语音再生成
 
-从 ECDICT 的完整 CSV 中筛选 `gk` 标签：
+项目保留六列词库 `resources/seed/exam-words.csv` 与 `resources/seed/guide-words.csv`。新词本另有 `resources/seed/guide-questions.csv`，记录 1—300 题的原图页码、中文题干、四个选项及答案；仅按大小写和空格差异去重，保留不同词形。原书第 123 题的 `hand-on` 保留原拼写并在词义中标明常见拼写 `hands-on`。生成器会校验 1200 个选项、896 个词形、音标、词性与汉译。APK 专用音频保存在 `resources/android-audio`，普通网页构建不会包含这些 MP3：
 
 ```powershell
-node scripts/build-gaokao.mjs D:\path\to\ecdict.csv public\data\gaokao.json
+npm.cmd run build:data
+npm.cmd run build:speech
+npm.cmd run verify:speech
 ```
 
 ## 数据与隐私
 
-所有词本、进度、头像和设置都存储在浏览器 IndexedDB 中。使用神经朗读时，仅当前英语单词会发送到 Microsoft 在线朗读服务；中文释义、学习记录、昵称和词本不会发送。清理浏览器数据前，请在“设置 → 备份与恢复”中导出 JSON。
+所有词本、进度、头像和设置都存储在当前浏览器或 Android 应用的 IndexedDB 中。Android 预装语音在构建 APK 时生成，手机运行时不会发送单词；网页版使用神经朗读时，仅当前英语单词会发送到 Microsoft 在线朗读服务。清理数据或卸载应用前，请在“设置 → 备份与恢复”中导出 JSON。
 
 ## 许可
 
-项目使用 MIT License。初始结构参考 HSK Cards，内置词库来自 ECDICT；详情见 `THIRD_PARTY_NOTICES.md`。
+项目使用 MIT License。初始结构参考 HSK Cards；内置词本的来源与第三方软件许可详见 `THIRD_PARTY_NOTICES.md`。

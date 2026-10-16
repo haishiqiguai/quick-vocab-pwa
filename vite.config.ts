@@ -6,8 +6,9 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      disable: process.env.QUICK_VOCAB_TARGET === 'android',
       registerType: 'autoUpdate',
-      includeAssets: ['icons/icon-192.png', 'icons/icon-512.png', 'data/gaokao.json', 'import-template.csv'],
+      includeAssets: ['icons/icon-192.png', 'icons/icon-512.png', 'data/exam-words.json', 'data/guide-words.json', 'import-template.csv'],
       manifest: {
         name: '速记单词 · Quick Vocab',
         short_name: '速记单词',

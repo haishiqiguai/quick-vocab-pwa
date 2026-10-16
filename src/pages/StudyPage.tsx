@@ -1,4 +1,5 @@
-import { ArrowLeft, Check, EyeOff, Heart, RotateCcw, Settings2, Volume2, X } from 'lucide-react';
+import { ArrowLeft, Check, EyeOff, Heart, Pause, Play, RotateCcw, Settings2, Square, Volume2, X } from 'lucide-react';
+import { App as CapacitorApp } from '@capacitor/app';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from '../lib/router';
@@ -8,12 +9,17 @@ import { db, markWordViewed, progressId, recordReview, toggleFavorite } from '..
 import { createLocalId } from '../lib/id';
 import { useSearchParams } from '../lib/router';
 import { applyStudyPlan, buildReviewOptions, moveWrongWordToBack } from '../lib/study';
-import { prefetchSpeechWords, SPEECH_RATE_PRESETS, speakWord, speechOptionsFromSettings, stopSpeaking } from '../lib/speech';
+import { formatMeaningForSpeech, prefetchSpeechWords, SPEECH_RATE_PRESETS, speakChineseAndWait, speakWord, speakWordAndWait, speechOptionsFromSettings, speechPlaybackCompleted, stopSpeaking, warmUpChineseSpeech } from '../lib/speech';
 import { NEURAL_SPEECH_VOICES } from '../lib/speechApi';
+import { isNativeAndroid } from '../lib/platform';
+import { isAndroidEdgeStart, useAndroidBackHandler } from '../lib/androidBack';
+import { buildNativePlaybackStart, isNativePlaybackStatusForSession, NativePlayback, reconcileNativePlaybackStatus, shouldUseNativeAutoPlayback, type NativePlaybackStatus } from '../lib/nativePlayback';
+import { useStudyScreenAwake } from '../lib/screenAwake';
 import { useApp } from '../state/AppContext';
 import type { StudyBackgroundMode, StudySession, Word } from '../types';
 
 interface Metrics { viewed: number; correct: number; wrong: number }
+type AutoPlaybackState = 'idle' | 'playing' | 'paused';
 
 const STUDY_BACKGROUNDS: Array<{ value: StudyBackgroundMode; label: string }> = [
   { value: 'default', label: '默认' },
@@ -26,6 +32,11 @@ export function StudyPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { activeBook, plan, settings, updateSettings } = useApp();
+  const nativeAndroid = isNativeAndroid();
+  useStudyScreenAwake(nativeAndroid);
+  const neuralVoices = nativeAndroid
+    ? NEURAL_SPEECH_VOICES.filter((voice) => voice.id === 'en-US-AriaNeural')
+    : NEURAL_SPEECH_VOICES;
   const resumeWordId = searchParams.get('resumeWord');
   const resumeSessionId = searchParams.get('resumeSession');
   const allWords = useLiveQuery(() => activeBook ? db.words.where('bookId').equals(activeBook.id).toArray() : [], [activeBook?.id], []) ?? [];
@@ -47,8 +58,10 @@ export function StudyPage() {
   const [wrongFeedback, setWrongFeedback] = useState<string>();
   const [pronunciationNotice, setPronunciationNotice] = useState<string>();
   const [studySettingsOpen, setStudySettingsOpen] = useState(false);
+  const resumeAfterSettingsRef = useRef(false);
   const [complete, setComplete] = useState(false);
   const [studyReady, setStudyReady] = useState(false);
+  const [autoPlaybackState, setAutoPlaybackState] = useState<AutoPlaybackState>('idle');
   const [metrics, setMetrics] = useState<Metrics>({ viewed: 0, correct: 0, wrong: 0 });
   const metricsRef = useRef(metrics);
   const completedRef = useRef(false);
@@ -58,15 +71,63 @@ export function StudyPage() {
   const resumeInitializedRef = useRef(false);
   const autoReadWordRef = useRef<string>();
   const autoReadWrongAttemptRef = useRef<string>();
+  const currentWordIdRef = useRef<string>();
+  const autoPlaybackRef = useRef({ runId: 0, state: 'idle' as AutoPlaybackState, resume: undefined as (() => void) | undefined, cancelDelay: undefined as (() => void) | undefined });
+  const nativePlaybackSessionRef = useRef<string>();
+  const nativeCompletedThroughRef = useRef(0);
+  const nativeStatusWriteRef = useRef<Promise<void>>(Promise.resolve());
   const focusWordRef = useRef<HTMLHeadingElement>(null);
 
   const currentWord = plan.mode === 'review'
     ? studyWords.find((word) => word.id === queue[0])
     : studyWords[index];
+  currentWordIdRef.current = currentWord?.id;
   const currentProgress = useLiveQuery(
     () => currentWord ? db.progress.get(progressId(currentWord.bookId, currentWord.id)) : undefined,
     [currentWord?.id]
   );
+
+  const setAutoPlayback = useCallback((state: AutoPlaybackState) => {
+    autoPlaybackRef.current.state = state;
+    setAutoPlaybackState(state);
+  }, []);
+
+  const stopAutoPlayback = useCallback(() => {
+    const playback = autoPlaybackRef.current;
+    if (playback.state !== 'idle') autoReadWordRef.current = currentWordIdRef.current;
+    playback.runId += 1;
+    playback.resume?.();
+    playback.cancelDelay?.();
+    playback.resume = undefined;
+    playback.cancelDelay = undefined;
+    const nativeSessionId = nativePlaybackSessionRef.current;
+    nativePlaybackSessionRef.current = undefined;
+    setAutoPlayback('idle');
+    stopSpeaking();
+    if (nativeSessionId) void NativePlayback.stop({ sessionId: nativeSessionId }).catch(() => undefined);
+  }, [setAutoPlayback]);
+
+  const waitForPlaybackResume = useCallback(async (runId: number): Promise<boolean> => {
+    const playback = autoPlaybackRef.current;
+    if (playback.runId !== runId) return false;
+    if (playback.state !== 'paused') return true;
+    await new Promise<void>((resolve) => { playback.resume = resolve; });
+    playback.resume = undefined;
+    return playback.runId === runId && (playback.state as AutoPlaybackState) === 'playing';
+  }, []);
+
+  const waitForPlaybackDelay = useCallback(async (runId: number, milliseconds: number): Promise<boolean> => {
+    if (milliseconds <= 0) return autoPlaybackRef.current.runId === runId;
+    await new Promise<void>((resolve) => {
+      const timeout = window.setTimeout(resolve, milliseconds);
+      autoPlaybackRef.current.cancelDelay = () => {
+        window.clearTimeout(timeout);
+        resolve();
+      };
+    });
+    autoPlaybackRef.current.cancelDelay = undefined;
+    return autoPlaybackRef.current.runId === runId;
+  }, []);
 
   useLayoutEffect(() => {
     const element = focusWordRef.current;
@@ -181,17 +242,20 @@ export function StudyPage() {
   useEffect(() => {
     if (!settings.autoPronounce) {
       autoReadWordRef.current = undefined;
-      setPronunciationNotice(undefined);
       return;
     }
-    if (!studyReady || complete || wrongFeedback || !currentWord || autoReadWordRef.current === currentWord.id) return;
+    if (studySettingsOpen || !studyReady || complete || autoPlaybackState !== 'idle' || wrongFeedback || !currentWord || autoReadWordRef.current === currentWord.id) return;
     autoReadWordRef.current = currentWord.id;
     setPronunciationNotice(undefined);
     void speakWord(currentWord.term, speechOptionsFromSettings(settings, {
       quiet: true,
       onError: (message) => setPronunciationNotice(message)
     }));
-  }, [complete, currentWord, plan.mode, settings, studyReady, wrongFeedback]);
+  }, [studySettingsOpen, autoPlaybackState, complete, currentWord, plan.mode, settings, studyReady, wrongFeedback]);
+
+  useEffect(() => {
+    setPronunciationNotice(undefined);
+  }, [currentWord?.id]);
 
   useEffect(() => {
     if (!wrongFeedback) {
@@ -232,11 +296,11 @@ export function StudyPage() {
   }, [complete, index, persistSession, plan.mode, queue, studyReady]);
 
   useEffect(() => () => {
-    stopSpeaking();
+    stopAutoPlayback();
     if (sessionIdRef.current && !completedRef.current) {
       void persistSession({ ...metricsRef.current, endedAt: new Date().toISOString() });
     }
-  }, [persistSession]);
+  }, [persistSession, stopAutoPlayback]);
 
   const finishRound = useCallback(async () => {
     if (completedRef.current) return;
@@ -250,23 +314,181 @@ export function StudyPage() {
         reviewQueue: plan.mode === 'review' ? [] : undefined
       });
     }
+    stopAutoPlayback();
     setComplete(true);
-  }, [persistSession, plan.mode, studyWords.length]);
+  }, [persistSession, plan.mode, stopAutoPlayback, studyWords.length]);
 
-  const nextBrowse = useCallback(async () => {
-    const word = studyWords[index];
-    if (!word) return;
-    const isLastWord = index >= studyWords.length - 1;
-    if (!isLastWord) setIndex((current) => current + 1);
+  const advanceBrowse = useCallback(async (currentIndex: number): Promise<boolean> => {
+    const word = studyWords[currentIndex];
+    if (!word) return false;
+    const isLastWord = currentIndex >= studyWords.length - 1;
+    if (!isLastWord) setIndex(currentIndex + 1);
     await markWordViewed(word);
     const nextMetrics = { ...metricsRef.current, viewed: metricsRef.current.viewed + 1 };
     metricsRef.current = nextMetrics;
     setMetrics(nextMetrics);
-    if (!isLastWord) void persistSession({ resumeIndex: index + 1 });
+    if (!isLastWord) void persistSession({ resumeIndex: currentIndex + 1 });
     if (isLastWord) await finishRound();
-  }, [index, studyWords, finishRound, persistSession]);
+    return !isLastWord;
+  }, [studyWords, finishRound, persistSession]);
 
-  const previousBrowse = useCallback(() => setIndex((current) => Math.max(0, current - 1)), []);
+  const applyNativePlaybackStatus = useCallback((status: NativePlaybackStatus) => {
+    const activeSessionId = nativePlaybackSessionRef.current;
+    if (!isNativePlaybackStatusForSession(activeSessionId, status)) return;
+    nativeStatusWriteRef.current = nativeStatusWriteRef.current
+      .catch(() => undefined)
+      .then(async () => {
+        if (!isNativePlaybackStatusForSession(nativePlaybackSessionRef.current, status)) return;
+        const update = reconcileNativePlaybackStatus(nativeCompletedThroughRef.current, status, studyWords.length);
+        for (const completedIndex of update.completedIndexes) {
+          nativeCompletedThroughRef.current = completedIndex + 1;
+          if (!(await advanceBrowse(completedIndex))) return;
+        }
+        nativeCompletedThroughRef.current = update.acknowledgedThroughIndex;
+        if (!completedRef.current && update.currentIndex < studyWords.length) setIndex(update.currentIndex);
+        setAutoPlayback(update.autoPlaybackState);
+        if (update.failureReason) {
+          setPronunciationNotice(`${update.failureReason}，自动播放已停止`);
+          nativePlaybackSessionRef.current = undefined;
+        } else if (status.state === 'completed' || status.state === 'idle') {
+          nativePlaybackSessionRef.current = undefined;
+        }
+      });
+  }, [advanceBrowse, setAutoPlayback, studyWords.length]);
+
+  useEffect(() => {
+    if (!shouldUseNativeAutoPlayback(nativeAndroid, plan.mode)) return;
+    let disposed = false;
+    const handles: Array<{ remove: () => Promise<void> }> = [];
+    const synchronize = async () => {
+      const status = await NativePlayback.getStatus().catch(() => undefined);
+      if (!disposed && status) applyNativePlaybackStatus(status);
+    };
+    void NativePlayback.addListener('playbackStatus', applyNativePlaybackStatus).then((handle) => {
+      if (disposed) void handle.remove();
+      else handles.push(handle);
+    });
+    void CapacitorApp.addListener('appStateChange', ({ isActive }) => {
+      if (isActive) void synchronize();
+    }).then((handle) => {
+      if (disposed) void handle.remove();
+      else handles.push(handle);
+    });
+    void synchronize();
+    return () => {
+      disposed = true;
+      for (const handle of handles) void handle.remove();
+    };
+  }, [applyNativePlaybackStatus, nativeAndroid, plan.mode]);
+
+  const nextBrowse = useCallback(async () => {
+    stopAutoPlayback();
+    await advanceBrowse(index);
+  }, [advanceBrowse, index, stopAutoPlayback]);
+
+  const previousBrowse = useCallback(() => {
+    stopAutoPlayback();
+    setIndex((current) => Math.max(0, current - 1));
+  }, [stopAutoPlayback]);
+
+  const startAutoPlayback = useCallback(async () => {
+    if (!settings.autoPlayEnabled) {
+      setPronunciationNotice('请先在设置中开启自动播放');
+      return;
+    }
+    if (!settings.autoPlayWord && !settings.autoPlayMeaning) {
+      setPronunciationNotice('请至少开启“播放单词”或“播放单词中文意思”');
+      return;
+    }
+    stopAutoPlayback();
+    const runId = autoPlaybackRef.current.runId + 1;
+    autoPlaybackRef.current.runId = runId;
+    setAutoPlayback('playing');
+    setPronunciationNotice(undefined);
+    if (shouldUseNativeAutoPlayback(nativeAndroid, plan.mode)) {
+      const nativeSessionId = `native-${createLocalId()}`;
+      nativePlaybackSessionRef.current = nativeSessionId;
+      nativeCompletedThroughRef.current = index;
+      try {
+        const request = await buildNativePlaybackStart({ sessionId: nativeSessionId, words: studyWords, startIndex: index, settings });
+        if (autoPlaybackRef.current.runId !== runId || nativePlaybackSessionRef.current !== nativeSessionId) return;
+        await NativePlayback.start(request);
+      } catch {
+        if (nativePlaybackSessionRef.current !== nativeSessionId) return;
+        nativePlaybackSessionRef.current = undefined;
+        setPronunciationNotice('无法启动后台播放，请重新尝试');
+        setAutoPlayback('idle');
+      }
+      return;
+    }
+    if (settings.autoPlayMeaning) await warmUpChineseSpeech();
+    if (autoPlaybackRef.current.runId !== runId) return;
+    let currentIndex = index;
+    while (autoPlaybackRef.current.runId === runId && currentIndex < studyWords.length) {
+      const word = studyWords[currentIndex];
+      for (let repeat = 0; repeat < settings.autoPlayRepeatCount && settings.autoPlayWord; ) {
+        if (!(await waitForPlaybackResume(runId))) return;
+        const result = await speakWordAndWait(word.term, speechOptionsFromSettings(settings, { quiet: true, onError: setPronunciationNotice }));
+        if (autoPlaybackRef.current.runId !== runId) return;
+        if (autoPlaybackRef.current.state === 'paused') continue;
+        if (!speechPlaybackCompleted(result)) {
+          setPronunciationNotice('英文朗读失败，自动播放已停止');
+          stopAutoPlayback();
+          return;
+        }
+        repeat += 1;
+      }
+      if (settings.autoPlayMeaning) {
+        if (!(await waitForPlaybackResume(runId))) return;
+        const result = await speakChineseAndWait(word.id, formatMeaningForSpeech(word.meaning), { rate: settings.speechRate, quiet: true, onError: setPronunciationNotice });
+        if (autoPlaybackRef.current.runId !== runId) return;
+        if (autoPlaybackRef.current.state === 'paused') continue;
+        if (!speechPlaybackCompleted(result)) {
+          setPronunciationNotice('中文朗读失败，自动播放已停止');
+          stopAutoPlayback();
+          return;
+        }
+      }
+      if (!(await waitForPlaybackResume(runId)) || !(await waitForPlaybackDelay(runId, settings.autoPlayInterval * 1000)) || !(await waitForPlaybackResume(runId))) return;
+      if (!(await advanceBrowse(currentIndex))) return;
+      currentIndex += 1;
+    }
+  }, [advanceBrowse, index, nativeAndroid, plan.mode, setAutoPlayback, settings, stopAutoPlayback, studyWords, waitForPlaybackDelay, waitForPlaybackResume]);
+
+  useEffect(() => {
+    if (studySettingsOpen || !resumeAfterSettingsRef.current) return;
+    resumeAfterSettingsRef.current = false;
+    if (!complete && settings.autoPlayEnabled) void startAutoPlayback();
+  }, [studySettingsOpen, complete, settings.autoPlayEnabled, startAutoPlayback]);
+
+  const pauseAutoPlayback = useCallback(() => {
+    if (autoPlaybackRef.current.state !== 'playing') return;
+    setAutoPlayback('paused');
+    const nativeSessionId = nativePlaybackSessionRef.current;
+    if (nativeSessionId) {
+      void NativePlayback.pause({ sessionId: nativeSessionId }).catch(() => {
+        setPronunciationNotice('暂停后台播放失败，播放已停止');
+        stopAutoPlayback();
+      });
+      return;
+    }
+    autoPlaybackRef.current.cancelDelay?.();
+    stopSpeaking();
+  }, [setAutoPlayback, stopAutoPlayback]);
+
+  const resumeAutoPlayback = useCallback(() => {
+    if (autoPlaybackRef.current.state !== 'paused') return;
+    setAutoPlayback('playing');
+    const nativeSessionId = nativePlaybackSessionRef.current;
+    if (nativeSessionId) {
+      void NativePlayback.resume({ sessionId: nativeSessionId }).catch(() => {
+        setPronunciationNotice('继续后台播放失败，播放已停止');
+        stopAutoPlayback();
+      });
+      return;
+    }
+    autoPlaybackRef.current.resume?.();
+  }, [setAutoPlayback, stopAutoPlayback]);
 
   const answerReview = useCallback(async (answer: string) => {
     if (!currentWord || wrongFeedback) return;
@@ -289,6 +511,7 @@ export function StudyPage() {
   }, [currentWord, queue, wrongFeedback, finishRound, persistSession]);
 
   const exitStudy = useCallback(async () => {
+    stopAutoPlayback();
     if (!complete && plan.mode === 'browse' && currentWord) {
       const finishesCurrentRound = index >= studyWords.length - 1;
       await markWordViewed(currentWord);
@@ -306,7 +529,17 @@ export function StudyPage() {
       await persistSession({ ...metricsRef.current, endedAt: new Date().toISOString(), reviewQueue: queue });
     }
     navigate('/');
-  }, [complete, currentWord, index, navigate, persistSession, plan.mode, queue, studyWords.length]);
+  }, [complete, currentWord, index, navigate, persistSession, plan.mode, queue, stopAutoPlayback, studyWords.length]);
+
+  const handleAndroidBack = useCallback(async () => {
+    if (studySettingsOpen) {
+      setStudySettingsOpen(false);
+      return true;
+    }
+    await exitStudy();
+    return true;
+  }, [exitStudy, studySettingsOpen]);
+  useAndroidBackHandler(handleAndroidBack);
 
   const continueAfterWrong = useCallback(() => {
     setQueue((current) => {
@@ -318,6 +551,7 @@ export function StudyPage() {
   }, [persistSession]);
 
   async function restart() {
+    stopAutoPlayback();
     completedRef.current = false;
     sessionIdRef.current = '';
     sessionRecordRef.current = undefined;
@@ -350,8 +584,8 @@ export function StudyPage() {
 
   const swipe = useSwipeable({
     onSwipedUp: () => plan.mode === 'browse' && void nextBrowse(),
-    onSwipedLeft: () => plan.mode === 'browse' && void nextBrowse(),
-    onSwipedRight: () => plan.mode === 'browse' && previousBrowse(),
+    onSwipedLeft: (event) => plan.mode === 'browse' && !(nativeAndroid && isAndroidEdgeStart(event.initial[0])) && void nextBrowse(),
+    onSwipedRight: (event) => plan.mode === 'browse' && !(nativeAndroid && isAndroidEdgeStart(event.initial[0])) && previousBrowse(),
     preventScrollOnSwipe: true,
     trackTouch: true
   });
@@ -366,7 +600,7 @@ export function StudyPage() {
       <header className="study-header">
         <button className="icon-button" onClick={() => void exitStudy()} aria-label="退出学习"><ArrowLeft /></button>
         <div className="study-header-title"><strong>{plan.mode === 'browse' ? 'Target' : 'Review'}</strong><small>{activeBook?.name}</small></div>
-        <div className="study-header-actions"><span>{Math.min(position, studyWords.length)} / {studyWords.length}</span><button className="icon-button" onClick={() => setStudySettingsOpen(true)} aria-label="打开学习设置"><Settings2 /></button></div>
+        <div className="study-header-actions"><span>{Math.min(position, studyWords.length)} / {studyWords.length}</span><button className="icon-button" onClick={() => { resumeAfterSettingsRef.current = autoPlaybackRef.current.state === 'playing'; stopAutoPlayback(); setStudySettingsOpen(true); }} aria-label="打开学习设置"><Settings2 /></button></div>
       </header>
       <div className="study-progress"><i style={{ width: `${progressPercent}%` }} /></div>
 
@@ -395,10 +629,19 @@ export function StudyPage() {
               </div>
             </div>
             <div className="speech-voice-control">
-              <label><strong>朗读声音</strong><small>{settings.speechEngine === 'neural' ? '电脑神经语音 · 手机电脑一致' : '手机或电脑系统声音'}</small><select aria-label="朗读声音" value={settings.speechEngine === 'system' ? 'system' : settings.neuralVoice} onChange={(event) => { const value = event.target.value; void updateSettings(value === 'system' ? { ...settings, speechEngine: 'system' } : { ...settings, speechEngine: 'neural', neuralVoice: value }); }}><optgroup label="自然神经语音">{NEURAL_SPEECH_VOICES.map((voice) => <option key={voice.id} value={voice.id}>{voice.name} · {voice.label}</option>)}</optgroup><option value="system">系统语音（备用）</option></select></label>
+              <label><strong>朗读声音</strong><small>{settings.speechEngine === 'neural' ? (nativeAndroid ? '预装 Aria 英文 · 晓晓中文' : '电脑神经语音 · 手机电脑一致') : '手机或电脑系统声音'}</small><select aria-label="朗读声音" value={settings.speechEngine === 'system' || (nativeAndroid && settings.neuralVoice !== 'en-US-AriaNeural') ? 'system' : settings.neuralVoice} onChange={(event) => { const value = event.target.value; void updateSettings(value === 'system' ? { ...settings, speechEngine: 'system' } : { ...settings, speechEngine: 'neural', neuralVoice: value }); }}><optgroup label={nativeAndroid ? '预装离线神经语音' : '自然神经语音'}>{neuralVoices.map((voice) => <option key={voice.id} value={voice.id}>{voice.name} · {voice.label}</option>)}</optgroup><option value="system">系统语音（备用）</option></select></label>
               <button type="button" aria-label="试听朗读声音" onClick={() => void speakWord(currentWord?.term ?? 'welcome', speechOptionsFromSettings(settings))}><Volume2 size={16} />试听</button>
             </div>
-            <p>设置会自动保存。神经语音由电脑生成，手机和电脑听到的声音一致；系统语音仅作为备用。</p>
+            {plan.mode === 'browse' && <section className="study-playback-settings" aria-labelledby="study-playback-title">
+              <header><Play size={17} /><div><strong id="study-playback-title">自动播放</strong><small>播放后自动切换到下一个单词</small></div><label className="switch"><input aria-label="学习时自动播放" type="checkbox" checked={settings.autoPlayEnabled} onChange={(event) => void updateSettings({ ...settings, autoPlayEnabled: event.target.checked })} /><i /></label></header>
+              <div className="study-playback-options">
+                <label><span>间隔时间</span><input aria-label="学习时播放间隔时间" type="number" min="0" max="60" step="1" value={settings.autoPlayInterval} onChange={(event) => void updateSettings({ ...settings, autoPlayInterval: Number(event.target.value) })} /><em>秒</em></label>
+                <label><span>循环次数</span><input aria-label="学习时单词循环次数" type="number" min="1" max="10" step="1" value={settings.autoPlayRepeatCount} onChange={(event) => void updateSettings({ ...settings, autoPlayRepeatCount: Number(event.target.value) })} /><em>次</em></label>
+                <label><span>播放英文单词</span><input aria-label="学习时播放英文单词" type="checkbox" checked={settings.autoPlayWord} onChange={(event) => void updateSettings({ ...settings, autoPlayWord: event.target.checked })} /></label>
+                <label><span>播放中文意思</span><input aria-label="学习时播放中文意思" type="checkbox" checked={settings.autoPlayMeaning} onChange={(event) => { if (event.target.checked) void warmUpChineseSpeech(); void updateSettings({ ...settings, autoPlayMeaning: event.target.checked }); }} /></label>
+              </div>
+            </section>}
+            <p>{nativeAndroid ? '设置会自动保存。默认词本使用离线 Aria 英文和晓晓中文；导入词或缺失音频自动改用手机系统语音。' : '设置会自动保存。神经语音由电脑生成，手机和电脑听到的声音一致；系统语音仅作为备用。'}</p>
           </section>
         </div>
       )}
@@ -413,8 +656,14 @@ export function StudyPage() {
           <p className="core-meaning">{currentWord.meaning}</p>
           {currentWord.variants.length > 0 && <div className="variants">{currentWord.variants.slice(0, 6).map((variant) => <span key={variant}>{variant}</span>)}</div>}
           <button className={`favorite-study ${currentProgress?.favorite ? 'active' : ''}`} onClick={() => void toggleFavorite(currentWord)} aria-label="收藏"><Heart fill={currentProgress?.favorite ? 'currentColor' : 'none'} /><span>{currentProgress?.favorite ? '已收藏' : '收藏到生词本'}</span></button>
-          {pronunciationNotice && <p className="pronunciation-notice" role="status">{pronunciationNotice}。可在右上角设置中临时改用系统语音。</p>}
+          {pronunciationNotice && <p className="pronunciation-notice" role="status">{pronunciationNotice}{!nativeAndroid && pronunciationNotice.includes('朗读') && '。可在右上角设置中临时改用系统语音。'}</p>}
           <div className="swipe-hint">上滑学习下一个单词</div>
+          <div className="auto-playback-controls" aria-label="自动播放控制">
+            {autoPlaybackState === 'idle' ? <Button onClick={() => void startAutoPlayback()}><Play size={18} />开始播放</Button>
+              : autoPlaybackState === 'playing' ? <Button className="secondary" onClick={pauseAutoPlayback}><Pause size={18} />暂停播放</Button>
+                : <Button onClick={resumeAutoPlayback}><Play size={18} />继续播放</Button>}
+            {autoPlaybackState !== 'idle' && <Button className="secondary" onClick={stopAutoPlayback}><Square size={17} />停止</Button>}
+          </div>
           <div className="study-controls"><Button className="secondary" onClick={previousBrowse} disabled={index === 0}>上一个</Button><Button onClick={() => void nextBrowse()}>下一个</Button></div>
         </main>
       )}

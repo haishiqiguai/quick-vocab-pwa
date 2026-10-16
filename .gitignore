@@ -6,9 +6,27 @@ test-results/
 *.log
 runtime/
 tmp/
+artifacts/
+android/.gradle/
+android/.idea/
+android/build/
+android/app/build/
+android/local.properties
+android/signing.properties
+android/keystore/
+android/*.jks
+android/*.keystore
+*.jks
+*.keystore
+*.p12
+*.pfx
+.android-sdk/
+.superpowers/
+docs/superpowers/
 .env
 .env.*
 !.env.example
 参考程序/
 要求/
+对口升学复习指导 单词/
 .DS_Store

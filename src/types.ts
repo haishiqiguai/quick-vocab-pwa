@@ -70,6 +70,11 @@ export interface AppSettings {
   studyBackground: StudyBackgroundMode;
   repetitiveLearning: boolean;
   autoPronounce: boolean;
+  autoPlayEnabled: boolean;
+  autoPlayInterval: number;
+  autoPlayRepeatCount: number;
+  autoPlayWord: boolean;
+  autoPlayMeaning: boolean;
   hidePhonetic: boolean;
   speechRate: number;
   speechEngine: SpeechEngine;
@@ -91,6 +96,7 @@ export interface StudyActivityRecord {
 }
 
 export interface SeedWord {
+  id?: string;
   term: string;
   meaning: string;
   phonetic?: string;

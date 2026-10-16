@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">速记单词</string>
+    <string name="title_activity_main">速记单词</string>
+    <string name="package_name">com.haishiqiguai.quickvocab</string>
+    <string name="custom_url_scheme">com.haishiqiguai.quickvocab</string>
+</resources>

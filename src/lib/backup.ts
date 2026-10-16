@@ -1,4 +1,7 @@
+import { Directory, Encoding, Filesystem } from '@capacitor/filesystem';
+import { Share } from '@capacitor/share';
 import { db } from './db';
+import { isNativeAndroid } from './platform';
 import type { BackupPayload } from '../types';
 
 export async function createBackup(): Promise<BackupPayload> {
@@ -22,11 +25,33 @@ export async function createBackup(): Promise<BackupPayload> {
 
 export async function downloadBackup(): Promise<void> {
   const payload = await createBackup();
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const json = JSON.stringify(payload, null, 2);
+  const fileName = `quick-vocab-backup-${payload.exportedAt.slice(0, 10)}.json`;
+  if (isNativeAndroid()) {
+    const written = await Filesystem.writeFile({
+      path: fileName,
+      data: json,
+      directory: Directory.Cache,
+      encoding: Encoding.UTF8,
+      recursive: true
+    });
+    try {
+      await Share.share({
+        title: '速记单词备份',
+        text: '请选择保存位置或发送给自己妥善保管。',
+        files: [written.uri],
+        dialogTitle: '保存速记单词备份'
+      });
+    } finally {
+      await Filesystem.deleteFile({ path: fileName, directory: Directory.Cache }).catch(() => undefined);
+    }
+    return;
+  }
+  const blob = new Blob([json], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = `quick-vocab-backup-${payload.exportedAt.slice(0, 10)}.json`;
+  anchor.download = fileName;
   anchor.click();
   URL.revokeObjectURL(url);
 }

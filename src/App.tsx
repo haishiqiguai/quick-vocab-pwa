@@ -14,6 +14,7 @@ import { BackupPage } from './pages/BackupPage';
 import { GuidePage } from './pages/GuidePage';
 import { AboutPage } from './pages/AboutPage';
 import { useLocation, useNavigate } from './lib/router';
+import { installAndroidBackBridge, minimizeAndroidApp } from './lib/androidBack';
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { error?: string }> {
   state: { error?: string } = {};
@@ -33,6 +34,15 @@ function AppRoutes() {
   const navigate = useNavigate();
   const path = pathname !== '/' ? pathname.replace(/\/+$/, '') : '/';
   const knownPaths = ['/', '/dashboard', '/settings', '/study', '/plan', '/words', '/favorites', '/import', '/backup', '/guide', '/about'];
+
+  useEffect(() => installAndroidBackBridge(() => {
+    if (path === '/') {
+      void minimizeAndroidApp();
+      return;
+    }
+    if (window.history.length > 1) navigate(-1);
+    else navigate('/', { replace: true });
+  }), [navigate, path]);
 
   useEffect(() => {
     if (!knownPaths.includes(path)) navigate('/', { replace: true });
